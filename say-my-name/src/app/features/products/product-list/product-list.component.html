@@ -1,0 +1,11 @@
+<p>product-list works!</p>
+<div class="product-list">
+    <h2>Our Products</h2>
+    <div class="product-grid">
+      <div class="product-card" *ngFor="let product of dummyProducts">
+        <h3>{{product.name}}</h3>
+        <p>Price: ${{product.price}}</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+  </div>
