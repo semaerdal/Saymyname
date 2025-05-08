@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router'; // Combined import
+import { RouterModule, Routes } from '@angular/router';
 
 export const routes: Routes = [
   { 
