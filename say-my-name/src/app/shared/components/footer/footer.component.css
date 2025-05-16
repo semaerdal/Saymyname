@@ -1,0 +1,22 @@
+footer {
+    padding: 1em;
+    background: var(--deep-maroon);
+    column-count: 3;
+    column-rule-style: solid;
+    margin-top: 2%;
+}
+
+footer ul {
+  padding: 0;
+  display: table-cell;
+} 
+
+footer a{
+  display: block;
+  padding: 1em;
+  text-transform: initial;
+  position: relative;
+  color: white;
+  letter-spacing:.2em;
+  text-decoration: none;
+}
