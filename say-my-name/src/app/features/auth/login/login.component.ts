@@ -35,7 +35,6 @@ export class LoginComponent {
   onSignup() {
     if (this.signupForm.valid) {
       console.log('Signup data:', this.signupForm.value);
-      // Add your registration logic here
       this.router.navigate(['/']);
     }
   }
@@ -43,7 +42,6 @@ export class LoginComponent {
   onLogin() {
     if (this.loginForm.valid) {
       console.log('Login data:', this.loginForm.value);
-      // Add your authentication logic here
       this.router.navigate(['/']);
     }
   }
