@@ -1,0 +1,32 @@
+nav{
+    background-color: var(--deep-maroon);
+    overflow: visible;
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+}
+
+nav ul{
+    width: 100%;
+    text-align: center;
+}
+
+nav li{
+    margin: 0 auto;
+    list-style: none;
+    padding: 0;
+    float: left;
+    display: block;
+}
+
+nav li:hover {
+    text-decoration: dotted;
+    background-color: var(--blush);
+}
+
+nav a {
+    display: block;
+    padding: 25px;
+    text-transform: initial;
+    position: relative;
+}
