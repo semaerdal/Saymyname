@@ -14,10 +14,12 @@ export const routes: Routes = [
     path: 'cart', 
     loadChildren: () => import('./features/cart/cart.module').then(m => m.CartModule) 
   },
-  { 
-    path: 'auth', 
-    loadChildren: () => import('./features/auth/auth.module').then(m => m.AuthModule) 
+ {
+    path: 'login',
+    title: 'Login',
+    loadComponent: () => import('./features/auth/login/login.component').then(m => m.LoginComponent)
   },
+  
   { path: '**', redirectTo: '' }
 ];
 
