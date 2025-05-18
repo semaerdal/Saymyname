@@ -58,6 +58,12 @@ main{
   padding-right:1em;
 }
 
+/* Alle Bilder haben abgerundete Ecken */
+
+img {
+  border-radius: 25px;
+}
+
 
 /* Button styles */
 .btn-primary {
