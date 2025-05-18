@@ -2,7 +2,7 @@
 /* CUSTOM COLOR PALETTE  */
 /* ==================== */
 :root {
-  /* Primary Colors (From your palette) */
+  /* Primary Colors */
   --peach: #FFC9B5;       /* Soft peach (main brand color) */
   --deep-maroon: #754043; /* Rich maroon */
   --blush: #F7B1AB;       /* Light blush */
@@ -22,6 +22,7 @@
 /* ==================== */
 /* UTILITY CLASSES       */
 /* ==================== */
+
 /* Backgrounds */
 .bg-peach { background-color: var(--peach); }
 .bg-maroon { background-color: var(--deep-maroon); }
@@ -57,6 +58,7 @@ main{
   padding-left: 1em;
   padding-right:1em;
 }
+
 /* Header styling */
 .brand-header {
   background-color: var(--deep-maroon);

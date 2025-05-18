@@ -1,3 +1,5 @@
+/* navbar */
+
 nav{
     background-color: var(--deep-maroon);
     overflow: visible;
@@ -33,6 +35,8 @@ nav a {
     text-decoration: none;
 }    
 
+/* Suchleiste */
+
 nav .search-container {
     float: right;
     margin-left: 2rem;
@@ -59,6 +63,8 @@ nav .search-container button {
     background-color: unset;
   }
 
+/* Elemene Rechts in Navbar */
+  
 nav .right {
     float: right;
 }  
