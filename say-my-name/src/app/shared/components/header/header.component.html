@@ -1,10 +1,50 @@
-
 <!-- src/app/shared/components/header/header.component.html -->
 <nav>
-  <a routerLink="/">Home</a>
-  <a routerLink="/about">About Us</a>
-  <a routerLink="/impressum">Impressum</a>
-  <a routerLink="/kontakt">Kontakt</a>
-  <a routerLink="/login">Login</a>
-  <a routerLink="/account">Profil</a>
-</nav>
+  <ul>
+    <!--Logo anklickbar, ist home button-->
+    <li><a routerLink="/">Home</a></li>
+    <li><a routerLink="/about">Über Uns</a></li>
+    <li><a routerLink="/products">Produkte</a></li>
+    <li><a routerLink="/favorites">Favoriten</a></li>
+
+    <li class="no-events">
+      <div class="search-container"> 
+        <input type="text" placeholder="Suche..." name="searchbar">
+        <button onclick="searchBar()">Suchen</button>
+      </div>
+    </li>
+
+    
+    <li class="right">
+      <a routerLink="/cart" data-title="Warenkorb">Warenkorb</a>
+      <!-- icon einfügen geht nicht-->
+    </li>
+    <li class="right"><a routerLink="/login" data-title="Login">Login Profil icon</a></li>
+
+    
+
+    <!-- searchbar + Suche Button
+        Warenkrb Icon
+        Profil Icon -->
+
+
+    </ul>
+</nav>    
+
+
+    <!--
+    <li><a routerLink="/">Home</a></li>
+    <li><a routerLink="/about">About Us</a></li>
+    <li><a routerLink="/impressum">Impressum</a></li>
+    <li><a routerLink="/kontakt">Kontakt</a></li>
+    <li><a routerLink="/login">Login</a></li>
+    <li><a routerLink="/register">Registrieren</a></li>
+    <li><a routerLink="/account">Profil</a></li>
+  -->
+  
+
+<!-- logo, searchbar + button
+ change and delete some links
+ when mobile -> hamburger menu dropdown
+    -> icons online runterladen
+-->

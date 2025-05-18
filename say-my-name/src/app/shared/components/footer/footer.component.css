@@ -1,0 +1,32 @@
+footer {
+    padding: 1em;
+    background: var(--deep-maroon);
+    column-count: 3;
+    column-rule-style: solid;
+    column-rule-color: var(--dark-bown);
+    margin-top: 2%;
+}
+
+footer ul {
+  padding: 0;
+  display: table-cell;
+} 
+
+footer li{
+    list-style: none;
+    display: block;
+}
+
+footer li:hover {
+    text-decoration: dotted;
+    background-color: var(--blush);
+}
+
+footer a{
+  display: block;
+  padding: 1em;
+  text-transform: initial;
+  position: relative;
+  color: var(--cream);
+  text-decoration: none;
+}
