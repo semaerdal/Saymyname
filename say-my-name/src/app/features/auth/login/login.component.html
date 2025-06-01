@@ -1,15 +1,17 @@
 <body>
   <div class="centered-content">
-<div class="form-container">
-  <!-- Navigation zwischen Login und Registrierung -->
-  <ul class="tab-navigation">
-    <li class="tab-item" [class.active]="activeTab === 'signup'">
-      <a (click)="switchTab('signup')">Registrieren</a>
-    </li>
-    <li class="tab-item" [class.active]="activeTab === 'login'">
-      <a (click)="switchTab('login')">Anmelden</a>
-    </li>
-  </ul>
+    <div class="form-container">
+    
+      <!-- Navigation zwischen Login und Registrierung -->
+      <ul class="tab-navigation">
+        <li class="tab-item" [class.active]="activeTab === 'signup'">
+         <a (click)="switchTab('signup')">Registrieren</a>
+        </li>
+        
+        <li class="tab-item" [class.active]="activeTab === 'login'">
+        <a (click)="switchTab('login')">Anmelden</a>
+        </li>
+      </ul>
 
   <div class="form-content">
     <!-- Registrierungsformular -->
