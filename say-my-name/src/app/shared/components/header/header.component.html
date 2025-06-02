@@ -1,7 +1,8 @@
 <!-- src/app/shared/components/header/header.component.html -->
+<!--
 <nav>
   <ul>
-    <!--Logo anklickbar, ist home button-->
+    <!--Logo anklickbar, ist home button
     <li><a routerLink="/home" data-title="Home"><img src="/assets/images/icons/home_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="Home"></a></li>
     <li><a routerLink="/about">Über Uns</a></li>
     <li><a routerLink="/products">Produkte</a></li>
@@ -37,3 +38,41 @@
  when mobile -> hamburger menu dropdown
     -> icons online runterladen
 -->
+
+
+
+<!-- src/app/shared/components/header/header.component.html -->
+<nav>
+  <div class="nav-container">
+    <!-- Hamburger Menu Icon (Mobile Only) -->
+    <div class="hamburger" (click)="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- Logo (Mobile and Desktop) -->
+    <div class="logo">
+      <a routerLink="/home" data-title="Home">
+        <img src="/assets/images/icons/home_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="Home">
+      </a>
+    </div>
+
+    <!-- Navigation Links -->
+    <ul [class.active]="menuActive">
+      <li><a routerLink="/about" (click)="closeMenu()">Über Uns</a></li>
+      <li><a routerLink="/products" (click)="closeMenu()">Produkte</a></li>
+      <li><a routerLink="/kontakt" (click)="closeMenu()">Kontakt</a></li>
+
+      <li class="no-events">
+        <div class="search-container"> 
+          <input type="text" placeholder="Suche..." name="searchbar">
+          <button onclick="searchBar()">Suchen <img src="/assets/images/icons/search_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="Suche"></button>
+        </div>
+      </li>
+      
+      <li class="right"><a routerLink="/login" data-title="Login" (click)="closeMenu()"><img src="/assets/images/icons/person_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="Login"></a></li>
+      <li class="right"><a routerLink="/cart" data-title="Warenkorb" (click)="closeMenu()"><img src="/assets/images/icons/shopping_basket_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="Korb"></a></li>
+    </ul>
+  </div>
+</nav>

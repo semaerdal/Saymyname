@@ -1,4 +1,4 @@
-/* navbar */
+/* navbar 
 
 nav{
     background-color: var(--deep-maroon);
@@ -35,7 +35,7 @@ nav a {
     text-decoration: none;
 }    
 
-/* Suchleiste */
+/* Suchleiste 
 
 nav .search-container {
     float: right;
@@ -63,8 +63,155 @@ nav .search-container button {
     background-color: unset;
   }
 
-/* Elemente Rechts in Navbar */
+/* Elemente Rechts in Navbar 
   
 nav .right {
     float: right;
 }  
+
+*/
+
+
+/* navbar */
+nav {
+  background-color: var(--deep-maroon);
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  height: 70px; /* Fixed height for mobile */
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  height: 100%;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none; /* Hidden by default on desktop */
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 21px;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: var(--cream);
+  transition: all 0.3s ease;
+}
+
+/* Navigation Links */
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+nav li {
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  display: block;
+  padding: 25px;
+  text-transform: initial;
+  color: var(--cream);
+  text-decoration: none;
+}    
+
+nav li:hover {
+  text-decoration: dotted;
+  background-color: var(--blush);
+}
+
+/* Search Bar */
+.search-container {
+  display: flex;
+  align-items: center;
+  margin-left: 2rem;
+}
+
+input[type=text] {
+  padding: 15px;
+  font-size: 17px;
+}
+
+.search-container button {
+  padding: 25px;
+  margin-left: 16px;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  color: var(--cream);
+  background-color: transparent;
+}
+
+.no-events:hover {
+  background-color: unset;
+}
+
+/* Right-aligned items */
+.right {
+  margin-left: auto;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+    z-index: 11;
+  }
+  
+  nav ul {
+    position: fixed;
+    top: 70px;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background-color: var(--deep-maroon);
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    transition: left 0.3s ease;
+    padding-top: 20px;
+  }
+  
+  nav ul.active {
+    left: 0;
+  }
+  
+  nav li {
+    width: 100%;
+    text-align: center;
+  }
+  
+  nav a {
+    padding: 15px;
+  }
+  
+  .search-container {
+    margin: 15px 0;
+    width: 90%;
+    justify-content: center;
+  }
+  
+  .right {
+    margin-left: 0;
+  }
+  
+  .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
