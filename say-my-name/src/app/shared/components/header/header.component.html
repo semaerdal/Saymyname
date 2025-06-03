@@ -46,7 +46,7 @@
   <div class="nav-container">
     <!-- Hamburger Menu Icon (Mobile Only) -->
     <div class="hamburger" (click)="toggleMenu()">
-      <img src="assets/images/icons/menu_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="Home">
+      <img src="assets/images/icons/menu_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="Menu">
     </div>
 
     <!-- Logo (Mobile and Desktop) -->
@@ -69,8 +69,11 @@
         </div>
       </li>
       
-      <li class="right"><a routerLink="/login" data-title="Login" (click)="closeMenu()"><img src="/assets/images/icons/person_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="Login"></a></li>
-      <li class="right"><a routerLink="/cart" data-title="Warenkorb" (click)="closeMenu()"><img src="/assets/images/icons/shopping_basket_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="Korb"></a></li>
+      <!-- Right-aligned items group -->
+      <div class="right-items">
+        <li class="right"><a routerLink="/login" data-title="Login" (click)="closeMenu()"><img src="/assets/images/icons/person_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="Login"></a></li>
+        <li class="right"><a routerLink="/cart" data-title="Warenkorb" (click)="closeMenu()"><img src="/assets/images/icons/shopping_basket_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="Korb"></a></li>
+      </div>
     </ul>
   </div>
 </nav>
