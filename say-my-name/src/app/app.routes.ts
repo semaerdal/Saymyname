@@ -8,16 +8,10 @@ export const routes: Routes = [
     loadChildren: () => import('./features/home/home.module').then(m => m.HomeModule) 
   },
   { 
-    path: 'products', 
+    path: 'products',
     title: 'Produkte',
-    loadChildren: () => import('./features/products/products.module').then(m => m.ProductsModule) 
+    loadChildren: () => import('./features/products/products.module').then(m => m.ProductsModule)
   },
-  { 
-    path: 'cart',
-    title:'Warenkorb', 
-    loadChildren: () => import('./features/cart/cart.module').then(m => m.CartModule) 
-  },
-
   // Auth routes
   { 
     path: 'login',

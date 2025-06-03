@@ -1,0 +1,33 @@
+<main>
+  <div class="products-container">
+    <div class="product-card" *ngFor="let product of products">
+      <div class="product-image">
+        <img [src]="product.imagePath" [alt]="product.name">
+        <div class="info-icon" (click)="showDetails(product)">
+          <i class="material-icons">info_outline</i>
+        </div>
+      </div>
+      <div class="product-details">
+        <h3>{{product.name}}</h3>
+        <p class="price">£{{product.price}}</p>
+        <p class="description">{{product.description}}</p>
+        
+        <div class="product-specs" *ngIf="product.details.shade">
+          <span class="spec-label">Shade:</span>
+          <span class="spec-value">{{product.details.shade}}</span>
+        </div>
+        
+        <button class="add-to-cart" 
+                (click)="toggleCart(product)"
+                [class.added]="product.isAdded">
+          <span *ngIf="!product.isAdded">
+            <i class="material-icons">add_shopping_cart</i> Add to Cart
+          </span>
+          <span *ngIf="product.isAdded">
+            <i class="material-icons">check</i> Added to Bag
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</main>
