@@ -46,14 +46,12 @@
   <div class="nav-container">
     <!-- Hamburger Menu Icon (Mobile Only) -->
     <div class="hamburger" (click)="toggleMenu()">
-      <span></span>
-      <span></span>
-      <span></span>
+      <img src="assets/images/icons/menu_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="Home">
     </div>
 
     <!-- Logo (Mobile and Desktop) -->
     <div class="logo">
-      <a routerLink="/home" data-title="Home">
+      <a routerLink="/home" (click)="closeMenu()" data-title="Home">
         <img src="/assets/images/icons/home_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="Home">
       </a>
     </div>
