@@ -49,19 +49,57 @@ body {
   color: var(--dark-brown);
   margin: 0;
   padding: 0;
+  font-family: Arial, sans-serif;
 }
 
 main{
   padding-top:6em;
   min-height:80em;
-  padding-left: 1em;
-  padding-right:1em;
 }
 
 /* Alle Bilder haben abgerundete Ecken */
 
 img {
   border-radius: 25px;
+}
+
+/* ==================== */
+/* BANNER STYLES */
+/* ==================== */
+.banner {
+    position: relative;
+    width: 90%;
+    height: 45vh;
+    margin: 0 auto;
+    background-image: url(assets/images/pexels-photo-1115128.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 25px;
+    box-shadow: 0 8px 20px rgba(117, 64, 67, 0.2); /* Neuer Schatten */
+    overflow: hidden; /* Verhindert überlaufende Schatten */
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--deep-maroon);
+    text-align: center;
+    width: 80%;
+}
+
+.banner-title {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    font-weight: bolder;
+}
+
+.banner-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
 }
 
 
