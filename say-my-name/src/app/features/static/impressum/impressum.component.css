@@ -1,0 +1,130 @@
+/* ==================== */
+/* CONTENT BOX STYLES */
+/* ==================== */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 90%;
+    margin: 2rem auto;
+    gap: 20px;
+}
+
+.box, .image-box {
+    flex: 1;
+    min-width: 300px;
+    background-color: var(--blush);
+    color: var(--dark-brown);
+    height: auto;
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 0 4px 12px rgba(117, 64, 67, 0.15);
+}
+
+.boxHead {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    color: var(--dark-brown);
+}
+
+.boxInfo {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.boxInfo p {
+    margin-bottom: 1.5rem;
+}
+
+.boxInfo strong {
+    color: var(--dark-brown);
+    font-weight: bold;
+}
+
+.boxInfo a {
+    color: var(--dark-brown);
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.boxInfo a:hover {
+    color: #2a1a1a;
+    text-decoration: none;
+}
+
+.image-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* ==================== */
+/* MOBILE STYLES */
+/* ==================== */
+@media (max-width: 768px) {
+@media (max-width: 768px) {
+    .banner {
+        width: 95%;
+        height: 35vh;
+        border-radius: 15px;
+    }
+
+    .banner-title {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .banner-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .container {
+        width: 95%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box, .image-box {
+        width: 100%;
+        margin: 10px 0;
+        border-radius: 15px;
+    }
+}
+    
+    .boxInfo p {
+        font-size: 0.95rem;
+    }
+    
+    .boxHead {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+ .banner {
+        height: 30vh;
+        border-radius: 12px;
+    }
+
+    .banner-title {
+        font-size: 1.8rem;
+    }
+
+    .banner-subtitle {
+        font-size: 1rem;
+    }
+
+    .box, .image-box {
+        border-radius: 12px;
+        padding: 15px;
+    }
+    
+    .boxInfo p {
+        font-size: 0.9rem;
+    }
+    
+    .boxHead {
+        font-size: 1.1rem;
+    }
+}
