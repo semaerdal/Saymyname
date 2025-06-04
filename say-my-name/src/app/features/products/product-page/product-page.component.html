@@ -9,7 +9,7 @@
       </div>
       <div class="product-details">
         <h3>{{product.name}}</h3>
-        <p class="price">£{{product.price}}</p>
+        <p class="price">€{{product.price}}</p>
         <p class="description">{{product.description}}</p>
         
         <div class="product-specs" *ngIf="product.details.shade">
@@ -17,16 +17,15 @@
           <span class="spec-value">{{product.details.shade}}</span>
         </div>
         
-        <button class="add-to-cart" 
-                (click)="toggleCart(product)"
-                [class.added]="product.isAdded">
-          <span *ngIf="!product.isAdded">
-            <i class="material-icons">add_shopping_cart</i> Add to Cart
-          </span>
-          <span *ngIf="product.isAdded">
-            <i class="material-icons">check</i> Added to Bag
-          </span>
-        </button>
+<button class="add-to-cart" 
+        (click)="toggleCart(product)"
+        [class.added]="product.isAdded"
+        [attr.aria-label]="product.isAdded ? 'Added to cart' : 'Add to cart'">
+  <span class="cart-icon-wrapper">
+    <img src="assets/images/icons/cart.png" alt="" class="cart-icon" *ngIf="!product.isAdded">
+    <img src="assets/images/icons/check.png" alt="" class="check-icon" *ngIf="product.isAdded">
+  </span>
+</button>
       </div>
     </div>
   </div>
