@@ -1,4 +1,32 @@
+<!-- home.component.html -->
+<div class="landing-page">
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Discover Your Glow</h1>
+      <p class="subtitle">Luxury beauty products crafted for your unique radiance</p>
+      <a routerLink="/products" class="cta-button">Shop Now</a>
+    </div>
+    <div class="hero-image">
+      <img src="assets/images/products/istockphoto-668311868-1024x1024.jpg" alt="Beauty products">
+    </div>
+  </section>
 
+  <!-- Featured Categories -->
+  <section class="featured-categories">
+    <h2>Our Collections</h2>
+    <div class="categories-grid">
+      @for (category of categories; track category.name) {
+        <div class="category-card">
+          <img [src]="category.image" [alt]="category.name">
+          <div class="category-overlay">
+            <h3>{{category.name}}</h3>
+            <a [routerLink]="category.link" class="shop-link">Shop {{category.name}}</a>
+          </div>
+        </div>
+      }
+    </div>
+  </section>
 
   <!-- Best Sellers -->
   <section class="best-sellers">
