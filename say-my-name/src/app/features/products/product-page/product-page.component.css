@@ -1,45 +1,4 @@
-:host {
-  --peach: #FFC9B5;
-  --deep-maroon: #754043;
-  --blush: #F7B1AB;
-  --dark-brown: #3A2618;
-  --black: #000000;
-  --cream: #FFF8F6;
-  --warm-gray: #8C8C8C;
-}
 
-.banner {
-    position: relative;
-    width: 100%;
-    height: 45vh;
-    background-image: url('../../../../assets/images/pexels-photo-1115128.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 25px; 
-   
-}
- .banner-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: var(--deep-maroon);
-    text-align: center;
-    width: 80%;
-    z-index: 2;
-}
-
-.banner-title {
-    font-size: 3rem;
-    margin-bottom: 2rem;
-    font-weight: bolder;
-}
-.banner-subtitle {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    font-weight: bold;
-}
 
 
 .products-container {
@@ -240,4 +199,110 @@
   .product-image {
     height: 180px;
   }
+}
+
+/* ==================== */
+/* CONTENT BOX STYLES */
+/* ==================== */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 90%;
+    margin: 2rem auto;
+}
+
+.box {
+    flex: 2;
+    min-width: 300px;
+    background-color: var(--blush);
+    color: var(--dark-brown);
+    height: auto;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(117, 64, 67, 0.15); /* Neuer Schatten */
+    transition: box-shadow 0.3s ease; /* Sanfte Animation */
+}
+
+.boxHead {
+    font-size: larger;
+    font-weight: bold;
+}
+
+.boxInfo {
+    font-size: medium;
+    font-weight: normal;
+}
+
+.image-box {
+    flex: 1;
+    min-width: 300px;
+    background-color: var(--blush);
+    height: auto;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+}
+
+.image-box img {
+    width: 100%;
+    height: auto;
+    box-shadow: 0 4px 12px rgba(117, 64, 67, 0.15); /* Neuer Schatten */
+    transition: box-shadow 0.3s ease; /* Sanfte Animation */
+}
+
+/* ==================== */
+/* MOBILE STYLES */
+/* ==================== */
+@media (max-width: 768px) {
+    .banner {
+        width: 95%;
+        height: 35vh;
+        border-radius: 15px;
+    }
+
+    .banner-title {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .banner-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .container {
+        width: 95%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box, .image-box {
+        width: 100%;
+        margin: 10px 0;
+        border-radius: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner {
+        height: 30vh;
+        border-radius: 12px;
+    }
+
+    .banner-title {
+        font-size: 1.8rem;
+    }
+
+    .banner-subtitle {
+        font-size: 1rem;
+    }
+
+    .box, .image-box {
+        border-radius: 12px;
+        padding: 15px;
+    }
 }
