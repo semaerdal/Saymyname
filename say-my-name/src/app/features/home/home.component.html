@@ -1,91 +1,48 @@
-<body>
-    <main>
-        <div class="banner">
-            <div class="banner-text">
-                <div class="banner-title">Say My Name</div>
-                <div class="banner-subtitle">To Find The Glow in YOU</div>
-            </div>
-        </div>
 
-    <!-- Services-->
-    <section class="page-section" id="services">
-        <div class="container">
-            <div class="text-center">
-                <h2 class="section-heading text-uppercase">Services</h2>
-                <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-            </div>
-            <div class="row text-center">
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fas fa-circle fa-stack-2x" style="color: #007bff;"></i>
-                        <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="my-3">E-Commerce</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-                </div>
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fas fa-circle fa-stack-2x" style="color: #007bff;"></i>
-                        <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="my-3">Responsive Design</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-                </div>
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fas fa-circle fa-stack-2x" style="color: #007bff;"></i>
-                        <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="my-3">Web Security</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Contact-->
-    <section class="page-section" id="contact">
-        <div class="container">
-            <div class="text-center">
-                <h2 class="section-heading text-uppercase">Contact Us</h2>
-                <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-            </div>
-            <form id="contactForm">
-                <div class="row align-items-stretch mb-5">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <input class="form-control" id="name" type="text" placeholder="Your Name *" required>
-                            <div class="invalid-feedback">A name is required.</div>
-                        </div>
-                        <div class="form-group">
-                            <input class="form-control" id="email" type="email" placeholder="Your Email *" required>
-                            <div class="invalid-feedback">An email is required.</div>
-                        </div>
-                        <div class="form-group mb-md-0">
-                            <input class="form-control" id="phone" type="tel" placeholder="Your Phone *" required>
-                            <div class="invalid-feedback">A phone number is required.</div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group form-group-textarea mb-md-0">
-                            <textarea class="form-control" id="message" placeholder="Your Message *" required></textarea>
-                            <div class="invalid-feedback">A message is required.</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="text-center">
-                    <button class="btn btn-primary btn-xl text-uppercase" type="submit">Send Message</button>
-                </div>
-            </form>
+  <!-- Best Sellers -->
+  <section class="best-sellers">
+    <h2>Best Sellers</h2>
+    <div class="products-carousel">
+      @for (product of featuredProducts; track product.name) {
+        <div class="product-card">
+          <img [src]="product.image" [alt]="product.name">
+          <div class="product-info">
+            <h3>{{product.name}}</h3>
+            <p class="price">€{{product.price}}</p>
+            <a [routerLink]="'/products'" class="view-btn">View Product</a>
+          </div>
         </div>
-    </section>
+      }
+    </div>
+  </section>
 
-    <script>
-        // Simple form validation
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Form would be submitted here in a real implementation');
-        });
-    </script>
-    </main>
-</body>
+  <!-- About Section -->
+  <section class="about-section">
+    <div class="about-image">
+      <img src="assets/images/products/istockphoto-668311868-1024x1024.jpg" alt="About our brand">
+    </div>
+    <div class="about-content">
+      <h2>Our Philosophy</h2>
+      <p>We believe beauty should be luxurious yet accessible, innovative yet timeless. Our products are cruelty-free and formulated with the finest ingredients to enhance your natural beauty.</p>
+      <ul class="benefits-list">
+        <li><i class="material-icons">check_circle</i> Cruelty Free</li>
+        <li><i class="material-icons">check_circle</i> Clean Ingredients</li>
+        <li><i class="material-icons">check_circle</i> Sustainable Packaging</li>
+      </ul>
+      <a routerLink="/about" class="learn-more">Learn More</a>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="newsletter">
+    <div class="newsletter-content">
+      <h2>Join Our Beauty Community</h2>
+      <p>Subscribe to receive exclusive offers, beauty tips, and early access to new products.</p>
+      <form class="subscribe-form">
+        <input type="email" placeholder="Your email address">
+        <button type="submit" class="subscribe-btn">Subscribe</button>
+      </form>
+    </div>
+  </section>
+</div>
