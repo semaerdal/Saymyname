@@ -1,0 +1,44 @@
+<main>
+  <div class="banner">
+    
+   <!-- 
+    <img class="banner-image" src="/assets/images/pexels-photo-1115128.png" alt="Banner Background">
+  -->
+      <div class="banner-text">
+          <div class="banner-title">Placeholder text</div>
+          <div class="banner-subtitle">text idk</div>
+      </div>
+
+  </div>
+
+  <div class="products-container">
+    <div class="product-card" *ngFor="let product of products">
+      <div class="product-image">
+        <img [src]="product.imagePath" [alt]="product.name">
+        <div class="info-icon" (click)="showDetails(product)">
+          <i class="material-icons">info_outline</i>
+        </div>
+      </div>
+      <div class="product-details">
+        <h3>{{product.name}}</h3>
+        <p class="price">€{{product.price}}</p>
+        <p class="description">{{product.description}}</p>
+        
+        <div class="product-specs" *ngIf="product.details.shade">
+          <span class="spec-label">Shade:</span>
+          <span class="spec-value">{{product.details.shade}}</span>
+        </div>
+        
+<button class="add-to-cart" 
+        (click)="toggleCart(product)"
+        [class.added]="product.isAdded"
+        [attr.aria-label]="product.isAdded ? 'Added to cart' : 'Add to cart'">
+  <span class="cart-icon-wrapper">
+    <img src="assets/images/icons/cart.png" alt="" class="cart-icon" *ngIf="!product.isAdded">
+    <img src="assets/images/icons/check.png" alt="" class="check-icon" *ngIf="product.isAdded">
+  </span>
+</button>
+      </div>
+    </div>
+  </div>
+</main>
