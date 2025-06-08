@@ -34,19 +34,15 @@ footer a {
 @media screen and (max-width: 768px) {
   footer {
     column-count: 1;
-    /* Nur eine Spalte auf mobilen Geräten */
     text-align: center;
-    /* Zentrierter Text */
   }
 
   footer ul {
     display: block;
-    /* Block statt table-cell für bessere Darstellung */
     margin-bottom: 1em;
   }
 
   footer a {
     padding: 0.5em;
-    /* Kleinere Padding auf mobilen Geräten */
   }
 }

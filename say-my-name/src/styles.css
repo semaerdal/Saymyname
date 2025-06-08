@@ -69,7 +69,18 @@ img {
   transition: box-shadow 0.3s ease;
 }
 
+.boxHead {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: var(--dark-brown);
+}
 
+.boxInfo {
+  font-size: medium;
+  font-weight: normal;
+  line-height: 1.6;
+}
 /* ==================== */
 /* BANNER STYLES */
 /* ==================== */
@@ -169,10 +180,6 @@ img {
   }
 }
 
-.boxInfo p {
-  font-size: 0.95rem;
-}
-
 .boxHead {
   font-size: 1.3rem;
 }
@@ -199,10 +206,6 @@ img {
     box-sizing: border-box;
     border-radius: 12px;
     padding: 15px;
-  }
-
-  .boxInfo p {
-    font-size: 0.9rem;
   }
 
   .boxHead {

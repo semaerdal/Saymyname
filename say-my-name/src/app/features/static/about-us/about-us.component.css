@@ -23,18 +23,21 @@
     /* Neuer Schatten /
     transition: box-shadow 0.3s ease;
     /* Sanfte Animation /
-}*/
+}
 
 .boxHead {
-    font-size: larger;
+    font-size: 1.5rem;
     font-weight: bold;
+    margin-bottom: 1.5rem;
+    color: var(--dark-brown);
 }
 
 .boxInfo {
     font-size: medium;
     font-weight: normal;
+    line-height: 1.6;
 }
-
+*/
 .image-box {
     flex: 1;
     min-width: 300px;
