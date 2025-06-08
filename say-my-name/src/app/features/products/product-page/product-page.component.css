@@ -89,8 +89,7 @@
 
 /* Added state styles */
 .add-to-cart.added {
-  background: #4CAF50;
-  /* Green color for success */
+  background: #4CAF50;      /* Green color for success */
   animation: pulse 0.5s ease;
 }
 

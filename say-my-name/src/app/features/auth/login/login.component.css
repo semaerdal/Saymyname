@@ -2,19 +2,14 @@ body {
   margin: 0;
   padding: 0;
   height: 100vh;
-  /* Full viewport height */
   display: flex;
   justify-content: center;
-  /* Horizontal center */
   align-items: center;
-  /* Vertical center */
   text-align: center;
-  /* Center text inside container */
 }
 
 .centered-content {
-  max-width: 600px;
-  /* Optional: Limit width */
+  max-width: 600px;   /* Optional: Limit width */
   padding: 20px;
 }
 
@@ -24,7 +19,6 @@ body {
 
 .form-container {
   background: var(--cream);
-  /* Heller Hintergrund */
   padding: 50px 40px;
   max-width: 600px;
   margin: 60px auto;
