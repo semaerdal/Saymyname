@@ -74,7 +74,7 @@
     margin: 2rem auto;
 }
 
-.box {
+.box-left,.box-right {
     flex: 2;
     min-width: 300px;
     background-color: var(--blush);
@@ -96,25 +96,6 @@
 .boxInfo {
     font-size: medium;
     font-weight: normal;
-}
-
-.image-box {
-    flex: 1;
-    min-width: 300px;
-    background-color: var(--blush);
-    height: auto;
-    margin: 20px;
-    padding: 20px;
-    border-radius: 25px;
-    display: flex;
-    align-items: center;
-}
-
-.image-box img {
-    width: 100%;
-    height: auto;
-    box-shadow: 0 4px 12px rgba(117, 64, 67, 0.15); /* Neuer Schatten */
-    transition: box-shadow 0.3s ease; /* Sanfte Animation */
 }
 
 /* ==================== */
@@ -142,7 +123,7 @@
         align-items: center;
     }
 
-    .box, .image-box {
+    .box-left, .box-right {
         width: 100%;
         margin: 10px 0;
         border-radius: 15px;
@@ -171,7 +152,7 @@
         font-size: 1rem;
     }
 
-    .box, .image-box {
+    .box-left, .box-right {
         border-radius: 12px;
         padding: 15px;
     }
