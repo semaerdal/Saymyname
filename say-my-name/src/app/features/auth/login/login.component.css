@@ -1,24 +1,30 @@
 body {
-    margin: 0;
-    padding: 0;
-    height: 100vh; /* Full viewport height */
-    display: flex;
-    justify-content: center; /* Horizontal center */
-    align-items: center; /* Vertical center */
-    text-align: center; /* Center text inside container */
-    }
-    
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  /* Full viewport height */
+  display: flex;
+  justify-content: center;
+  /* Horizontal center */
+  align-items: center;
+  /* Vertical center */
+  text-align: center;
+  /* Center text inside container */
+}
+
 .centered-content {
-    max-width: 600px; /* Optional: Limit width */
-    padding: 20px;
-    }
+  max-width: 600px;
+  /* Optional: Limit width */
+  padding: 20px;
+}
 
 /* ======================
   Formular mit Custom Colors
    ====================== */
 
 .form-container {
-  background: var(--cream); /* Heller Hintergrund */
+  background: var(--cream);
+  /* Heller Hintergrund */
   padding: 50px 40px;
   max-width: 600px;
   margin: 60px auto;
@@ -38,16 +44,16 @@ body {
   li {
     flex: 1;
 
-    &:first-child a{
+    &:first-child a {
       border-top-left-radius: 6px;
       border-bottom-left-radius: 6px;
     }
 
-     &:last-child a {
+    &:last-child a {
       border-top-right-radius: 6px;
       border-bottom-right-radius: 6px;
-    } 
-    
+    }
+
     a {
       display: block;
       text-align: center;
@@ -135,7 +141,8 @@ input {
   &:focus {
     border-color: var(--deep-maroon);
     outline: none;
-    box-shadow: 0 0 0 3px rgba(117, 64, 67, 0.1); /* sanfter Fokusrahmen */
+    box-shadow: 0 0 0 3px rgba(117, 64, 67, 0.1);
+    /* sanfter Fokusrahmen */
   }
 
   &.invalid {
@@ -184,5 +191,3 @@ input {
     }
   }
 }
-
-

@@ -1,7 +1,8 @@
 <!-- home.component.html -->
- <body>
+
+<body>
   <main>
-    
+
     <!-- BANNER!!!
     <div class="banner">
             <div class="banner-text">
@@ -11,80 +12,81 @@
         </div> 
       -->
 
-<div class="landing-page">
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Discover Your Glow</h1>
-      <p class="subtitle">Luxury beauty products crafted for your unique radiance</p>
-      <a routerLink="/products" class="cta-button">Shop Now</a>
-    </div>
-    <div class="hero-image">
-      <img src="assets/images/products/istockphoto-668311868-1024x1024.jpg" alt="Beauty products">
-    </div>
-  </section>
-
-  <!-- Featured Categories -->
-  <section class="featured-categories">
-    <h2>Our Collections</h2>
-    <div class="categories-grid">
-      @for (category of categories; track category.name) {
-        <div class="category-card">
-          <img [src]="category.image" [alt]="category.name">
-          <div class="category-overlay">
-            <h3>{{category.name}}</h3>
-            <a [routerLink]="category.link" class="shop-link">Shop {{category.name}}</a>
-          </div>
+    <div class="landing-page">
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="hero-content">
+          <h1>Discover Your Glow</h1>
+          <p class="subtitle">Luxury beauty products crafted for your unique radiance</p>
+          <a routerLink="/products" class="cta-button">Shop Now</a>
         </div>
-      }
-    </div>
-  </section>
-
-  <!-- Best Sellers -->
-  <section class="best-sellers">
-    <h2>Best Sellers</h2>
-    <div class="products-carousel">
-      @for (product of featuredProducts; track product.name) {
-        <div class="product-card">
-          <img [src]="product.image" [alt]="product.name">
-          <div class="product-info">
-            <h3>{{product.name}}</h3>
-            <p class="price">€{{product.price}}</p>
-            <a [routerLink]="'/products'" class="view-btn">View Product</a>
-          </div>
+        <div class="hero-image">
+          <img src="assets/images/products/istockphoto-668311868-1024x1024.jpg" alt="Beauty products">
         </div>
-      }
-    </div>
-  </section>
+      </section>
 
-  <!-- About Section -->
-  <section class="about-section">
-    <div class="about-image">
-      <img src="assets/images/products/istockphoto-668311868-1024x1024.jpg" alt="About our brand">
-    </div>
-    <div class="about-content">
-      <h2>Our Philosophy</h2>
-      <p>We believe beauty should be luxurious yet accessible, innovative yet timeless. Our products are cruelty-free and formulated with the finest ingredients to enhance your natural beauty.</p>
-      <ul class="benefits-list">
-        <li><i class="material-icons">check_circle</i> Cruelty Free</li>
-        <li><i class="material-icons">check_circle</i> Clean Ingredients</li>
-        <li><i class="material-icons">check_circle</i> Sustainable Packaging</li>
-      </ul>
-      <a routerLink="/about" class="learn-more">Learn More</a>
-    </div>
-  </section>
+      <!-- Featured Categories -->
+      <section class="featured-categories">
+        <h2>Our Collections</h2>
+        <div class="categories-grid">
+          @for (category of categories; track category.name) {
+          <div class="category-card">
+            <img [src]="category.image" [alt]="category.name">
+            <div class="category-overlay">
+              <h3>{{category.name}}</h3>
+              <a [routerLink]="category.link" class="shop-link">Shop {{category.name}}</a>
+            </div>
+          </div>
+          }
+        </div>
+      </section>
 
-  <!-- Newsletter -->
-  <section class="newsletter">
-    <div class="newsletter-content">
-      <h2>Join Our Beauty Community</h2>
-      <p>Subscribe to receive exclusive offers, beauty tips, and early access to new products.</p>
-      <form class="subscribe-form">
-        <input type="email" placeholder="Your email address">
-        <button type="submit" class="subscribe-btn">Subscribe</button>
-      </form>
+      <!-- Best Sellers -->
+      <section class="best-sellers">
+        <h2>Best Sellers</h2>
+        <div class="products-carousel">
+          @for (product of featuredProducts; track product.name) {
+          <div class="product-card">
+            <img [src]="product.image" [alt]="product.name">
+            <div class="product-info">
+              <h3>{{product.name}}</h3>
+              <p class="price">€{{product.price}}</p>
+              <a [routerLink]="'/products'" class="view-btn">View Product</a>
+            </div>
+          </div>
+          }
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section class="about-section">
+        <div class="about-image">
+          <img src="assets/images/products/istockphoto-668311868-1024x1024.jpg" alt="About our brand">
+        </div>
+        <div class="about-content">
+          <h2>Our Philosophy</h2>
+          <p>We believe beauty should be luxurious yet accessible, innovative yet timeless. Our products are
+            cruelty-free and formulated with the finest ingredients to enhance your natural beauty.</p>
+          <ul class="benefits-list">
+            <li><i class="material-icons">check_circle</i> Cruelty Free</li>
+            <li><i class="material-icons">check_circle</i> Clean Ingredients</li>
+            <li><i class="material-icons">check_circle</i> Sustainable Packaging</li>
+          </ul>
+          <a routerLink="/about" class="learn-more">Learn More</a>
+        </div>
+      </section>
+
+      <!-- Newsletter -->
+      <section class="newsletter">
+        <div class="newsletter-content">
+          <h2>Join Our Beauty Community</h2>
+          <p>Subscribe to receive exclusive offers, beauty tips, and early access to new products.</p>
+          <form class="subscribe-form">
+            <input type="email" placeholder="Your email address">
+            <button type="submit" class="subscribe-btn">Subscribe</button>
+          </form>
+        </div>
+      </section>
     </div>
-  </section>
-</div>
-</main>
+  </main>
 </body>

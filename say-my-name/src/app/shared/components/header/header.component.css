@@ -108,16 +108,16 @@ nav li:hover,
   .nav-container {
     justify-content: space-between;
   }
-  
+
   .logo {
     position: static;
     transform: none;
   }
-  
+
   nav ul {
     justify-content: flex-start;
   }
-  
+
   .right-items {
     margin-left: auto;
   }
@@ -128,7 +128,7 @@ nav li:hover,
   .hamburger {
     display: flex;
   }
-  
+
   nav ul {
     position: fixed;
     top: 70px;
@@ -140,26 +140,26 @@ nav li:hover,
     transition: left 0.3s ease;
     padding-top: 20px;
   }
-  
+
   nav ul.active {
     left: 0;
   }
-  
+
   nav li {
     width: 100%;
     text-align: center;
   }
-  
+
   .search-container {
     margin: 15px auto;
     width: 90%;
     justify-content: center;
   }
-  
+
   .search-container input[type="text"] {
     width: 70%;
   }
-  
+
   .right-items {
     margin-left: 0;
     width: 100%;

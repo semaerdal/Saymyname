@@ -3,20 +3,30 @@
 /* ==================== */
 :root {
   /* Primary Colors */
-  --peach: #FFC9B5;       /* Soft peach (main brand color) */
-  --deep-maroon: #754043; /* Rich maroon */
-  --blush: #F7B1AB;       /* Light blush */
-  --dark-brown: #3A2618;  /* Deep brown */
-  --black: #000000;       /* Pure black */
+  --peach: #FFC9B5;
+  /* Soft peach (main brand color) */
+  --deep-maroon: #754043;
+  /* Rich maroon */
+  --blush: #F7B1AB;
+  /* Light blush */
+  --dark-brown: #3A2618;
+  /* Deep brown */
+  --black: #000000;
+  /* Pure black */
 
   /* Derived Neutrals */
-  --cream: #FFF8F6;       /* Created from peach */
-  --warm-gray: #8C8C8C;   /* Complementary gray */
+  --cream: #FFF8F6;
+  /* Created from peach */
+  --warm-gray: #8C8C8C;
+  /* Complementary gray */
 
   /* Semantic Colors */
-  --success: #5C8D4E;     /* Earthy green */
-  --warning: #E6A443;     /* Golden yellow */
-  --error: #C84648;       /* Maroon-based red */
+  --success: #5C8D4E;
+  /* Earthy green */
+  --warning: #E6A443;
+  /* Golden yellow */
+  --error: #C84648;
+  /* Maroon-based red */
 }
 
 /* ==================== */
@@ -24,20 +34,47 @@
 /* ==================== */
 
 /* Backgrounds */
-.bg-peach { background-color: var(--peach); }
-.bg-maroon { background-color: var(--deep-maroon); }
-.bg-blush { background-color: var(--blush); }
-.bg-brown { background-color: var(--dark-brown); }
+.bg-peach {
+  background-color: var(--peach);
+}
+
+.bg-maroon {
+  background-color: var(--deep-maroon);
+}
+
+.bg-blush {
+  background-color: var(--blush);
+}
+
+.bg-brown {
+  background-color: var(--dark-brown);
+}
 
 /* Text colors */
-.text-peach { color: var(--peach); }
-.text-maroon { color: var(--deep-maroon); }
-.text-blush { color: var(--blush); }
-.text-brown { color: var(--dark-brown); }
+.text-peach {
+  color: var(--peach);
+}
+
+.text-maroon {
+  color: var(--deep-maroon);
+}
+
+.text-blush {
+  color: var(--blush);
+}
+
+.text-brown {
+  color: var(--dark-brown);
+}
 
 /* Borders */
-.border-peach { border: 1px solid var(--peach); }
-.border-maroon { border: 1px solid var(--deep-maroon); }
+.border-peach {
+  border: 1px solid var(--peach);
+}
+
+.border-maroon {
+  border: 1px solid var(--deep-maroon);
+}
 
 /* ==================== */
 /* COMPONENT STYLING     */
@@ -52,9 +89,9 @@ body {
   font-family: 'Segoe UI', sans-serif;
 }
 
-main{
-  padding-top:6em;
-  min-height:80em;
+main {
+  padding-top: 6em;
+  min-height: 80em;
 }
 
 /* Alle Bilder haben abgerundete Ecken */
@@ -67,41 +104,43 @@ img {
 /* BANNER STYLES */
 /* ==================== */
 .banner {
-    position: relative;
-    width: 90%;
-    height: 45vh;
-    margin: 0 auto;
-    background-image: url(assets/images/pexels-photo-1115128.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 25px;
-    box-shadow: 0 8px 20px rgba(117, 64, 67, 0.2); /* Neuer Schatten */
-    overflow: hidden; /* Verhindert überlaufende Schatten */
+  position: relative;
+  width: 90%;
+  height: 45vh;
+  margin: 0 auto;
+  background-image: url(assets/images/pexels-photo-1115128.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 25px;
+  box-shadow: 0 8px 20px rgba(117, 64, 67, 0.2);
+  /* Neuer Schatten */
+  overflow: hidden;
+  /* Verhindert überlaufende Schatten */
 }
 
 .banner-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: var(--deep-maroon);
-    text-align: center;
-    width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--deep-maroon);
+  text-align: center;
+  width: 80%;
 }
 
 .banner-title {
-    font-size: 3rem;
-    margin-bottom: 2rem;
-    font-weight: bolder;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  font-weight: bolder;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .banner-subtitle {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    font-weight: bold;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 
@@ -118,93 +157,85 @@ img {
 }
 
 
-/*
-.btn-primary {
-  background-color: var(--deep-brown);
-  color: var(--peach);
-  border: none;
-  padding: 0.75rem 1.5rem;
-  cursor: pointer;
-  
-  &:hover {
-    background-color: var(--dark-maroon);
-  }
-}
-
-.btn-secondary {
-  background-color: var(--blush);
-  color: var(--dark-brown);
-  border: none;
-  padding: 0.75rem 1.5rem;
-  cursor: pointer;
-}
-*/
-
 /* ==================== */
 /* MOBILE STYLES */
 /* ==================== */
 @media (max-width: 768px) {
-    .banner {
-        width: 95%;
-        height: 35vh;
-        border-radius: 15px;
-    }
 
-    .banner-title {
-        font-size: 2rem;
-        margin-bottom: 1rem;
-    }
+  html,
+  body {
+    overflow-x: hidden;
+    width: 100%;
+  }
 
-    .banner-subtitle {
-        font-size: 1.2rem;
-    }
+  .banner {
+    width: 95%;
+    height: 35vh;
+    border-radius: 15px;
+  }
 
-    .container {
-        width: 95%;
-        flex-direction: column;
-        align-items: center;
-    }
+  .banner-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
 
-    .box-left, .box-right {
-        width: 100%;
-        margin: 10px 0;
-        border-radius: 15px;
-    }
+  .banner-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .container {
+    width: 95%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .box-left,
+  .box-right {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 10px 0;
+    border-radius: 15px;
+  }
 }
-    
-    .boxInfo p {
-        font-size: 0.95rem;
-    }
-    
-    .boxHead {
-        font-size: 1.3rem;
-    }
+
+.boxInfo p {
+  font-size: 0.95rem;
+}
+
+.boxHead {
+  font-size: 1.3rem;
+}
 
 
 @media (max-width: 480px) {
- .banner {
-        height: 30vh;
-        border-radius: 12px;
-    }
+  .banner {
+    height: 30vh;
+    border-radius: 12px;
+  }
 
-    .banner-title {
-        font-size: 1.8rem;
-    }
+  .banner-title {
+    font-size: 1.8rem;
+  }
 
-    .banner-subtitle {
-        font-size: 1rem;
-    }
+  .banner-subtitle {
+    font-size: 1rem;
+  }
 
-    .box-left, .box-right {
-        border-radius: 12px;
-        padding: 15px;
-    }
-    
-    .boxInfo p {
-        font-size: 0.9rem;
-    }
-    
-    .boxHead {
-        font-size: 1.1rem;
-    }
+  .box-left,
+  .box-right {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    border-radius: 12px;
+    padding: 15px;
+  }
+
+  .boxInfo p {
+    font-size: 0.9rem;
+  }
+
+  .boxHead {
+    font-size: 1.1rem;
+  }
 }

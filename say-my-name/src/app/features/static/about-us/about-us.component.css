@@ -19,8 +19,10 @@
     padding: 20px;
     border-radius: 25px;
     text-align: center;
-    box-shadow: 0 4px 12px rgba(117, 64, 67, 0.15); /* Neuer Schatten */
-    transition: box-shadow 0.3s ease; /* Sanfte Animation */
+    box-shadow: 0 4px 12px rgba(117, 64, 67, 0.15);
+    /* Neuer Schatten */
+    transition: box-shadow 0.3s ease;
+    /* Sanfte Animation */
 }
 
 .boxHead {
@@ -48,7 +50,8 @@
 .image-box img {
     width: 100%;
     height: auto;
-    box-shadow: 0 4px 12px rgba(117, 64, 67, 0.15); /* Neuer Schatten */
-    transition: box-shadow 0.3s ease; /* Sanfte Animation */
+    box-shadow: 0 4px 12px rgba(117, 64, 67, 0.15);
+    /* Neuer Schatten */
+    transition: box-shadow 0.3s ease;
+    /* Sanfte Animation */
 }
-
