@@ -106,15 +106,28 @@ img {
 
 
 /* Button styles */
+.submit-btn {
+  color: var(--cream);
+  padding: 14px;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+
+/*
 .btn-primary {
-  background-color: var(--deep-maroon);
+  background-color: var(--deep-brown);
   color: var(--peach);
   border: none;
   padding: 0.75rem 1.5rem;
   cursor: pointer;
   
   &:hover {
-    background-color: var(--dark-brown);
+    background-color: var(--dark-maroon);
   }
 }
 
@@ -124,4 +137,74 @@ img {
   border: none;
   padding: 0.75rem 1.5rem;
   cursor: pointer;
+}
+*/
+
+/* ==================== */
+/* MOBILE STYLES */
+/* ==================== */
+@media (max-width: 768px) {
+    .banner {
+        width: 95%;
+        height: 35vh;
+        border-radius: 15px;
+    }
+
+    .banner-title {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .banner-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .container {
+        width: 95%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box-left, .box-right {
+        width: 100%;
+        margin: 10px 0;
+        border-radius: 15px;
+    }
+}
+    
+    .boxInfo p {
+        font-size: 0.95rem;
+    }
+    
+    .boxHead {
+        font-size: 1.3rem;
+    }
+
+
+@media (max-width: 480px) {
+ .banner {
+        height: 30vh;
+        border-radius: 12px;
+    }
+
+    .banner-title {
+        font-size: 1.8rem;
+    }
+
+    .banner-subtitle {
+        font-size: 1rem;
+    }
+
+    .box-left, .box-right {
+        border-radius: 12px;
+        padding: 15px;
+    }
+    
+    .boxInfo p {
+        font-size: 0.9rem;
+    }
+    
+    .boxHead {
+        font-size: 1.1rem;
+    }
 }

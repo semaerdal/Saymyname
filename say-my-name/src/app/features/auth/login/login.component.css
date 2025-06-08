@@ -34,12 +34,9 @@ body {
   margin-bottom: 40px;
   list-style: none;
   padding-left: 0;
-  /*border-radius: 6px;
-  overflow: hidden;*/
 
   li {
     flex: 1;
-   /* list-style: none; */
 
     &:first-child a{
       border-top-left-radius: 6px;
@@ -156,21 +153,13 @@ input {
 }
 
 /* Buttons */
-.btn {
+.submit-btn {
   background: var(--deep-maroon);
-  border: none;
-  padding: 14px;
-  font-size: 16px;
-  font-weight: bold;
-  color: var(--cream);
-  border-radius: 6px;
-  width: 100%;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  transition: background 0.3s ease;
 
   &:hover {
-    background: var(--black);
+    background-color: var(--dark-brown);
   }
 
   &[disabled] {

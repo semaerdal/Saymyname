@@ -34,14 +34,7 @@
 
 .submit-btn {
     background-color: var(--dark-brown);
-    color: var(--cream);
-    padding: 12px 20px;
-    border: none;
-    border-radius: 8px;
     cursor: pointer;
-    font-size: 1rem;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
     margin-top: 1rem;
 }
 
@@ -49,18 +42,6 @@
     background-color: var(--deep-maroon);
     box-shadow: 0 2px 8px rgba(117, 64, 67, 0.3);
 }
-
-/* Mobile adjustments for form */
-@media (max-width: 768px) {
-    .contact-form {
-        gap: 0.8rem;
-    }
-    
-    .submit-btn {
-        padding: 10px 15px;
-    }
-}
-
 
 
 /* ==================== */
@@ -72,21 +53,20 @@
     justify-content: space-evenly;
     width: 90%;
     margin: 2rem auto;
+    gap: 20px;
 }
 
-.box-left,.box-right {
-    flex: 2;
+.box-left, .box-right {
+    flex: 1;
     min-width: 300px;
     background-color: var(--blush);
     color: var(--dark-brown);
     height: auto;
-    margin: 20px;
-    padding: 20px;
+    padding: 30px;
     border-radius: 25px;
-    text-align: center;
-    box-shadow: 0 4px 12px rgba(117, 64, 67, 0.15); /* Neuer Schatten */
-    transition: box-shadow 0.3s ease; /* Sanfte Animation */
+    box-shadow: 0 4px 12px rgba(117, 64, 67, 0.15);
 }
+
 
 .boxHead {
     font-size: larger;
@@ -100,7 +80,7 @@
 
 /* ==================== */
 /* MOBILE STYLES */
-/* ==================== */
+/* ==================== 
 @media (max-width: 768px) {
     .banner {
         width: 95%;
@@ -156,4 +136,4 @@
         border-radius: 12px;
         padding: 15px;
     }
-}
+}*/

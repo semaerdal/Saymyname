@@ -61,8 +61,7 @@
 
 /* ==================== */
 /* MOBILE STYLES */
-/* ==================== */
-@media (max-width: 768px) {
+/* ==================== /
 @media (max-width: 768px) {
     .banner {
         width: 95%;
@@ -99,7 +98,7 @@
     .boxHead {
         font-size: 1.3rem;
     }
-}
+
 
 @media (max-width: 480px) {
  .banner {
@@ -128,3 +127,4 @@
         font-size: 1.1rem;
     }
 }
+*/

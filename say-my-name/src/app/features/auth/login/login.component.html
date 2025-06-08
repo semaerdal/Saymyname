@@ -59,7 +59,7 @@
           <small *ngIf="signupForm.get('password')?.errors?.['minlength']" class="error-message">Mindestens 6 Zeichen</small>
         </div>
 
-        <button type="submit" class="btn btn-full" [disabled]="signupForm.invalid">Jetzt registrieren</button>
+        <button type="submit" class="submit-btn btn-full" [disabled]="signupForm.invalid">Jetzt registrieren</button>
       </form>
     </div>
 
@@ -89,7 +89,7 @@
 
         <p class="forgot-password"><a routerLink="/forgot-password">Passwort vergessen?</a></p>
 
-        <button type="submit" class="btn btn-full" [disabled]="loginForm.invalid">Anmelden</button>
+        <button type="submit" class="submit-btn btn-full" [disabled]="loginForm.invalid">Anmelden</button>
       </form>
     </div>
   </div>
