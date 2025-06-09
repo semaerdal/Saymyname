@@ -7,11 +7,15 @@
         <li class="tab-item" [class.active]="activeTab === 'signup'">
           <a (click)="switchTab('signup')">Registrieren</a>
         </li>
-
         <li class="tab-item" [class.active]="activeTab === 'login'">
           <a (click)="switchTab('login')">Anmelden</a>
         </li>
       </ul>
+
+      <!-- GLOBALE FEHLERMELDUNG - HIER EINFÜGEN -->
+      <div *ngIf="errorMessage" class="error-message" style="margin: -20px 0 20px; text-align: center; padding: 10px; background: #ffe5e5; border-radius: 4px;">
+        {{ errorMessage }}
+      </div>
 
       <div class="form-content">
         <!-- Registrierungsformular -->

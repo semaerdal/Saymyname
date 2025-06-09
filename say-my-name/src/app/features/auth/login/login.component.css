@@ -9,7 +9,8 @@ body {
 }
 
 .centered-content {
-  max-width: 600px;   /* Optional: Limit width */
+  max-width: 600px;
+  /* Optional: Limit width */
   padding: 20px;
 }
 
@@ -184,4 +185,22 @@ input {
       color: var(--black);
     }
   }
+}
+
+/* Globale Fehlermeldung */
+.error-message {
+  color: var(--error);
+  font-size: 14px;
+  margin: -20px 0 20px;
+  padding: 12px;
+  text-align: center;
+  background: #ffeeee;
+  border-radius: 6px;
+  border-left: 4px solid var(--error);
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
