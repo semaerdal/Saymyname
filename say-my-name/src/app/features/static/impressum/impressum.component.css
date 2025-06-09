@@ -1,0 +1,38 @@
+/* ==================== */
+/* CONTENT BOX STYLES */
+/* ==================== */
+.boxInfo p {
+    margin-bottom: 1.5rem;
+}
+
+.boxInfo strong {
+    color: var(--dark-brown);
+    font-weight: bold;
+}
+
+.boxInfo a {
+    color: var(--dark-brown);
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.boxInfo a:hover {
+    color: var(--error);
+    text-decoration: none;
+}
+
+/* ==================== */
+/* MOBILE STYLES */
+/* ==================== */
+@media (max-width: 768px) {
+    .boxInfo p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    */ .boxInfo p {
+        font-size: 0.9rem;
+    }
+
+}
