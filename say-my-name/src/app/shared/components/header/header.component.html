@@ -1,58 +1,15 @@
 <!-- src/app/shared/components/header/header.component.html -->
-<!--
-<nav>
-  <ul>
-    <!--Logo anklickbar, ist home button
-    <li><a routerLink="/home" data-title="Home"><img src="/assets/images/icons/home_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="Home"></a></li>
-    <li><a routerLink="/about">Über Uns</a></li>
-    <li><a routerLink="/products">Produkte</a></li>
-    <li><a routerLink="/kontakt">Kontakt</a></li>
-
-    <li class="no-events">
-      <div class="search-container"> 
-        <input type="text" placeholder="Suche..." name="searchbar">
-        <button onclick="searchBar()">Suchen <img src="/assets/images/icons/search_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="Suche"></button>
-      </div>
-    </li>
-       
-    <li class="right"><a routerLink="/login" data-title="Login"><img src="/assets/images/icons/person_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="Login"></a></li>
-    <li class="right"><a routerLink="/cart" data-title="Warenkorb"><img src="/assets/images/icons/shopping_basket_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="Korb"></a></li>
-    </ul>
-</nav>    
-
-
-
-    <!--
-    <li><a routerLink="/">Home</a></li>
-    <li><a routerLink="/about">About Us</a></li>
-    <li><a routerLink="/impressum">Impressum</a></li>
-    <li><a routerLink="/kontakt">Kontakt</a></li>
-    <li><a routerLink="/login">Login</a></li>
-    <li><a routerLink="/register">Registrieren</a></li>
-    <li><a routerLink="/account">Profil</a></li>
-  -->
-  
-
-<!-- logo, searchbar + button
- change and delete some links
- when mobile -> hamburger menu dropdown
-    -> icons online runterladen
--->
-
-
-
-<!-- src/app/shared/components/header/header.component.html -->
 <nav>
   <div class="nav-container">
     <!-- Hamburger Menu Icon (Mobile Only) -->
     <div class="hamburger" (click)="toggleMenu()">
-      <img src="assets/images/icons/menu_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="Menu">
+      <img src="assets/images/icons/menu.png" alt="Menu">
     </div>
 
     <!-- Logo (Mobile and Desktop) -->
     <div class="logo">
       <a routerLink="/home" (click)="closeMenu()" data-title="Home">
-        <img src="/assets/images/icons/home_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="Home">
+        <img src="/assets/images/icons/home.png" alt="Home">
       </a>
     </div>
 
@@ -66,15 +23,15 @@
       <li class="no-events">
         <div class="search-container"> 
           <input type="text" placeholder="Suche..." name="searchbar">
-          <button onclick="searchBar()">Suchen <img src="/assets/images/icons/search_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="Suche"></button>
+          <button onclick="searchBar()">Suchen <img src="/assets/images/icons/search.png" alt="Suche"></button>
         </div>
       </li>
       </div>
       
       <!-- Right-aligned items group -->
       <div class="right-items">
-        <li class="right"><a routerLink="/login" data-title="Login" (click)="closeMenu()"><img src="/assets/images/icons/person_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="Login"></a></li>
-        <li class="right"><a routerLink="/cart" data-title="Warenkorb" (click)="closeMenu()"><img src="/assets/images/icons/shopping_basket_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="Korb"></a></li>
+        <li class="right"><a routerLink="/login" data-title="Login" (click)="closeMenu()"><img src="/assets/images/icons/person.png" alt="Login"></a></li>
+        <li class="right"><a routerLink="/cart" data-title="Warenkorb" (click)="closeMenu()"><img src="/assets/images/icons/shopping_basket.png" alt="Korb"></a></li>
       </div>
     </ul>
   </div>
