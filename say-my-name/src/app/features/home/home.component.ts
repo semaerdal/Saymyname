@@ -12,17 +12,17 @@ export class HomeComponent {
  categories = [
     {
       name: 'Skincare',
-      image: 'assets/images/landing/skincare.jpg',
+      image: 'assets/images/products/cream.jpg',
       link: '/products?category=skincare'
     },
     {
       name: 'Makeup',
-      image: 'assets/images/landing/makeup.jpg',
+      image: 'assets/images/products/cushion_foundation.jpg',
       link: '/products?category=makeup'
     },
     {
       name: 'Brushes',
-      image: 'assets/images/landing/brushes.jpg',
+      image: 'assets/images/products/brushes.jpg',
       link: '/products?category=brushes'
     }
   ];
@@ -31,17 +31,17 @@ export class HomeComponent {
     {
       name: 'Luminous Foundation',
       price: 42,
-      image: 'assets/images/products/istockphoto-1455210308-1024x1024.jpg'
+      image: 'assets/images/products/foundation.jpg'
     },
     {
       name: 'Matte Lipstick',
       price: 28,
-      image: 'assets/images/products/istockphoto-668311868-1024x1024.jpg'
+      image: 'assets/images/products/lipstick.jpg'
     },
     {
       name: 'Blush Duo',
       price: 34,
-      image: 'assets/images/products/istockphoto-668311868-1024x1024.jpg'
+      image: 'assets/images/products/blush.jpg'
     }
   ];
 }
