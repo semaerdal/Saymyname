@@ -10,9 +10,9 @@ footer {
 footer ul {
   padding: 0;
   display: table-cell;
-}
+} 
 
-footer li {
+footer li{
   list-style: none;
   display: block;
 }
@@ -22,27 +22,11 @@ footer li:hover {
   background-color: var(--blush);
 }
 
-footer a {
+footer a{
   display: block;
   padding: 1em;
   text-transform: initial;
   position: relative;
   color: var(--cream);
   text-decoration: none;
-}
-
-@media screen and (max-width: 768px) {
-  footer {
-    column-count: 1;
-    text-align: center;
-  }
-
-  footer ul {
-    display: block;
-    margin-bottom: 1em;
-  }
-
-  footer a {
-    padding: 0.5em;
-  }
 }

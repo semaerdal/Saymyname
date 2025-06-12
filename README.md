@@ -14,14 +14,7 @@ rm -rf node_modules package-lock.json .angular/cache
 npm install
 
 (einfach komplett copy paste und einfügen und dann wider ng serve --open und sollte funktionieren)
-
-
-Server stoppen: 
-        im Terminal:
-        STRG + C -> ggf. mit Y bestätigen
-
-Alles schön formatieren mit 
-        ALT + SHIFT + F
-        oder nur Auswahl formatieren:   STRG + K DANN!! STRG + F          
-
 -->
+
+<!-- hewwo owo
+wow>
