@@ -28,7 +28,7 @@ export class ProductPageComponent {
       id: 1,
       name: 'Luminous Foundation',
       price: 42,
-      imagePath: 'assets/images/products/istockphoto-1455210308-1024x1024.jpg',
+      imagePath: 'assets/images/products/foundation.jpg',
       description: 'Weightless medium-to-full coverage with a natural radiant finish',
       details: {
         shade: 'Warm Beige',
@@ -41,7 +41,7 @@ export class ProductPageComponent {
       id: 2,
       name: 'Matte Lipstick',
       price: 28,
-      imagePath: 'assets/images/products/istockphoto-668311868-1024x1024.jpg',
+      imagePath: 'assets/images/products/lipstick.jpg',
       description: 'Long-wearing, highly pigmented matte finish',
       details: {
         shade: 'Rosewood',
@@ -54,7 +54,7 @@ export class ProductPageComponent {
       id: 3,
       name: 'Eyeshadow Palette',
       price: 65,
-      imagePath: 'assets/images/pexels-photo-1115128.png',
+      imagePath: 'assets/images/products/palette.jpg',
       description: '12 versatile shades with matte and shimmer finishes',
       details: {
         weight: '15g',
@@ -66,7 +66,7 @@ export class ProductPageComponent {
       id: 4,
       name: 'Mascara',
       price: 26,
-      imagePath: 'assets/images/products/istockphoto-668311868-1024x1024.jpg',
+      imagePath: 'assets/images/products/mascara.jpg',
       description: 'Lengthening and volumizing formula',
       details: {
         weight: '10ml',
@@ -78,7 +78,7 @@ export class ProductPageComponent {
       id: 5,
       name: 'Blush Duo',
       price: 34,
-      imagePath: 'assets/images/products/istockphoto-668311868-1024x1024.jpg',
+      imagePath: 'assets/images/products/blush.jpg',
       description: 'Matte and shimmer pairing for customizable glow',
       details: {
         shade: 'Peachy Keen',
