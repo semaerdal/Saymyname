@@ -111,6 +111,18 @@ export class ProductPageComponent {
         type: 'Liquid'
       },
       isAdded: false
+    },
+    {
+      id: 8,
+      name: 'Makeup Brushes Set',
+      price: 75,
+      imagePath: 'assets/images/products/brushes.jpg',
+      description: 'Complete set of professional-grade brushes for flawless application',
+      details: {
+        weight: '200g',
+        type: 'Synthetic bristles'
+      },
+      isAdded: false
     }
   ];
 
