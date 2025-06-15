@@ -40,9 +40,14 @@ export class HomeComponent {
       image: 'assets/images/products/lipstick.jpg'
     },
     {
-      name: 'Blush Duo',
+      name: 'Cream Highlighter',
       price: 34,
-      image: 'assets/images/products/blush.jpg'
+      image: 'assets/images/products/cream.jpg'
+    },
+    {
+      name: 'Makeup Brushes Set',
+      price: 65,
+      image: 'assets/images/products/brushes.jpg'
     }
   ];
 }
