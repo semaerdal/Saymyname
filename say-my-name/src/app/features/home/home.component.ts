@@ -15,7 +15,6 @@ export class HomeComponent {
       image: 'assets/images/products/cream.jpg',
       link: '/products?category=skincare'
     },
-=======
 
     {
       name: 'Makeup',
