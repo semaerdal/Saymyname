@@ -10,11 +10,7 @@ import { RouterLink } from '@angular/router';
 export class HomeComponent {
 
  categories = [
-    {
-      name: 'Skincare',
-      image: 'assets/images/landing/skincare.jpg',
-      link: '/products?category=skincare'
-    },
+  
     {
       name: 'Makeup',
       image: 'assets/images/landing/makeup.jpg',
