@@ -231,6 +231,10 @@
   margin-right: 10px;
 }
 
+.benefits-list img {
+  filter: brightness(0%); /* Icons werden schwarz weil keine Helligkeit */
+}
+
 .learn-more {
   display: inline-block;
   color: var(--deep-maroon);
