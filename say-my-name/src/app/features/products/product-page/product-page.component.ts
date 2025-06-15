@@ -86,6 +86,43 @@ export class ProductPageComponent {
         type: 'Pressed powder'
       },
       isAdded: false
+    },
+    {
+      id: 6,
+      name: 'Cream Highlighter',
+      price: 30,
+      imagePath: 'assets/images/products/cream.jpg',
+      description: 'Buildable, blendable formula for a lit-from-within glow',
+      details: {
+        shade: 'Champagne',
+        weight: '10g',
+        type: 'Pressed powder'
+      },
+      isAdded: false
+    },
+    {
+      id: 7,
+      name: 'Toner',
+      price: 22,
+      imagePath: 'assets/images/products/toner.jpg',
+      description: 'Long-lasting, hydrating mist to set makeup',
+      details: {
+        weight: '100ml',
+        type: 'Liquid'
+      },
+      isAdded: false
+    },
+    {
+      id: 8,
+      name: 'Makeup Brushes Set',
+      price: 75,
+      imagePath: 'assets/images/products/brushes.jpg',
+      description: 'Complete set of professional-grade brushes for flawless application',
+      details: {
+        weight: '200g',
+        type: 'Synthetic bristles'
+      },
+      isAdded: false
     }
   ];
 
