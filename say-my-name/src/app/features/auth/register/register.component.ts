@@ -1,4 +1,4 @@
-// src/app/components/login/login.component.ts
+// src/app/components/register/register.component.ts
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -7,32 +7,32 @@ import { AuthService } from '../../../core/services/auth.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'app-login',
+  selector: 'app-register',
   standalone: true,
   imports: [CommonModule, FormsModule, ReactiveFormsModule, RouterModule],
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  templateUrl: './register.component.html',
+  styleUrls: ['./register.component.css']
 })
-export class LoginComponent {
-  loginForm: FormGroup;
+export class RegisterComponent {
+  registrierungsForm: FormGroup;
   fehlerNachricht: string = '';
 
   constructor(
     private authService: AuthService,
     private fb: FormBuilder
   ) {
-    this.loginForm = this.fb.group({
+    this.registrierungsForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
-      passwort: ['', Validators.required]
+      passwort: ['', [Validators.required, Validators.minLength(6)]]
     });
   }
 
-  async login() {
-    if (this.loginForm.valid) {
+  async registrieren() {
+    if (this.registrierungsForm.valid) {
       try {
-        await this.authService.login(
-          this.loginForm.value.email,
-          this.loginForm.value.passwort
+        await this.authService.registrieren(
+          this.registrierungsForm.value.email,
+          this.registrierungsForm.value.passwort
         );
       } catch (error: any) {
         this.fehlerNachricht = error.message;
