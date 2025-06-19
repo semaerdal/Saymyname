@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 export const routes: Routes = [
-  { 
+  {
     path: '', 
     title: 'SayMyName - Home',
     loadChildren: () => import('./features/public/home/home.module').then(m => m.HomeModule) 
