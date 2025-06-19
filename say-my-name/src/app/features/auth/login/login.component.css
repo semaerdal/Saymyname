@@ -185,3 +185,15 @@ input {
     }
   }
 }
+
+
+
+/* Fehlermeldung Box */
+.global-error {
+  background-color: #ffe5e5;
+  color: var(--error);
+  padding: 15px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  text-align: center;
+}

@@ -13,6 +13,11 @@
         </li>
       </ul>
 
+      <!-- Fehlermeldung anzeigen -->
+      <div *ngIf="errorMessage" class="error-message global-error">
+        {{ errorMessage }}
+      </div>>
+
       <div class="form-content">
         <!-- Registrierungsformular -->
         <div id="signup" *ngIf="activeTab === 'signup'" class="form-section">
