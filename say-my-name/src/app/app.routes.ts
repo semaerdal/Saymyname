@@ -29,11 +29,7 @@ export const routes: Routes = [
     title: 'My Account',
     loadComponent: () => import('./features/private/account/account.component').then(m => m.AccountComponent)
   },
-  { 
-    path: 'cart',
-    title: 'Cart',
-    loadComponent: () => import('./features/private/cart/cart.component').then(m => m.CartComponent),
-  },
+  
   // Static pages
   { 
     path: 'about',
