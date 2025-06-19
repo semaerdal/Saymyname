@@ -1,14 +1,13 @@
 <body>
   <div class="auth-container">
     <!-- Logout Section (shown when logged in) -->
-     <!-- Logout Section (shown when logged in) -->
     <div *ngIf="isLoggedIn" class="form-container">
       <div class="form-section">
         <h1>Willkommen zurück!</h1>
         <p class="welcome-message">Sie sind erfolgreich eingeloggt.</p>
         <div class="user-actions">
           <button (click)="onLogout()" class="logout-btn">Abmelden</button>
-          <a routerLink="/" class="home-link">Zur Startseite</a>
+          <button (click)="goToHome()" class="home-link">Zur Startseite</button>
         </div>
       </div>
     </div>

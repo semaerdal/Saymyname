@@ -86,9 +86,7 @@ export class LoginComponent {
     try {
       await signOut(this.auth);
       console.log('User logged out successfully');
-      // Zur Login-Seite navigieren statt zu /auth
       this.router.navigate(['/login']); 
-      // Optional: Formulare zurücksetzen
       this.loginForm.reset();
       this.signupForm.reset();
       this.activeTab = 'login';
@@ -125,4 +123,10 @@ export class LoginComponent {
     const control = form.get(field);
     return control?.invalid && (control?.dirty || control?.touched);
   }
+
+  // In der Komponente
+goToHome() {
+  this.router.navigate(['/']);  // oder ['/home']
+}
+
 }

@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router'; // Add this import
 @Component({
   selector: 'app-impressum',
-  imports: [RouterLink],
+  imports: [],
   templateUrl: './impressum.component.html',
   styleUrl: './impressum.component.css'
 })
