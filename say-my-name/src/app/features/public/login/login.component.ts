@@ -2,13 +2,13 @@ import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { Auth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from '@angular/fire/auth';
+import { Auth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from '@angular/fire/auth';
 import { FirebaseError } from 'firebase/app';
 
 @Component({
   standalone: true,
   imports: [CommonModule, ReactiveFormsModule],
-  selector: 'app-login',
+  selector: 'app-auth',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
@@ -16,6 +16,7 @@ export class LoginComponent {
   activeTab: 'login' | 'signup' = 'login';
   auth = inject(Auth);
   errorMessage: string | null = null;
+  isLoggedIn = false;
 
   // Form Groups
   signupForm = new FormGroup({
@@ -30,11 +31,15 @@ export class LoginComponent {
     password: new FormControl('', [Validators.required])
   });
 
-  constructor(private router: Router) {}
+  constructor(private router: Router) {
+    this.auth.onAuthStateChanged((user) => {
+      this.isLoggedIn = !!user;
+    });
+  }
 
   switchTab(tab: 'login' | 'signup') {
     this.activeTab = tab;
-    this.errorMessage = null; // Fehlermeldung zurücksetzen beim Tab-Wechsel
+    this.errorMessage = null;
   }
 
   async onSignup() {
@@ -58,31 +63,35 @@ export class LoginComponent {
   }
 
   async onLogin() {
-  console.log('Login-Formular:', this.loginForm.value); // Debug-Ausgabe
-  
-  if (this.loginForm.valid) {
-    const { email, password } = this.loginForm.value;
-    
-    try {
-      if (email && password) {
-        const userCredential = await signInWithEmailAndPassword(this.auth, email, password);
-        console.log('Erfolgreich eingeloggt:', userCredential.user);
-        this.router.navigate(['/']);
-      }
-    } catch (error: unknown) {
-      console.error('Login-Fehler:', error); // Wichtig für Debugging
+    if (this.loginForm.valid) {
+      const { email, password } = this.loginForm.value;
       
-      if (error instanceof FirebaseError) {
-        this.handleFirebaseError(error);
-      } else {
-        this.errorMessage = 'Unbekannter Fehler: ' + JSON.stringify(error);
+      try {
+        if (email && password) {
+          await signInWithEmailAndPassword(this.auth, email, password);
+          console.log('User logged in successfully');
+          this.router.navigate(['/']);
+        }
+      } catch (error: unknown) {
+        if (error instanceof FirebaseError) {
+          this.handleFirebaseError(error);
+        } else {
+          this.errorMessage = 'An unknown error occurred';
+        }
       }
     }
-  } else {
-    console.log('Formular ungültig', this.loginForm.errors);
-    this.errorMessage = 'Bitte fülle alle Felder korrekt aus';
   }
-}
+
+  async onLogout() {
+    try {
+      await signOut(this.auth);
+      console.log('User logged out successfully');
+      this.router.navigate(['/auth']); // Zurück zur Auth-Seite
+    } catch (error) {
+      console.error('Logout error:', error);
+      this.errorMessage = 'Logout failed';
+    }
+  }
 
   private handleFirebaseError(error: FirebaseError) {
     switch (error.code) {
@@ -112,4 +121,3 @@ export class LoginComponent {
     return control?.invalid && (control?.dirty || control?.touched);
   }
 }
-

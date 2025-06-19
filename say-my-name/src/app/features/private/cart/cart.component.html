@@ -1,0 +1,26 @@
+<div class="cart-container">
+  <h2>Dein Warenkorb</h2>
+  
+  <div *ngIf="cartItems$ | async as items; else emptyCart">
+    <div class="cart-item" *ngFor="let item of items; let i = index">
+      <img [src]="item.image" [alt]="item.name" class="product-image">
+      <div class="item-details">
+        <h3>{{ item.name }}</h3>
+        <p>{{ item.price | currency:'EUR' }}</p>
+      </div>
+      <button (click)="removeItem(i)" class="remove-btn">×</button>
+    </div>
+
+    <div class="cart-summary">
+      <p>Gesamt: <strong>{{ getTotal(items) | currency:'EUR' }}</strong></p>
+      <button class="checkout-btn">Zur Kasse</button>
+    </div>
+  </div>
+
+  <ng-template #emptyCart>
+    <div class="empty-cart">
+      <p>Dein Warenkorb ist leer</p>
+      <a routerLink="/products">Weiter einkaufen</a>
+    </div>
+  </ng-template>
+</div>
