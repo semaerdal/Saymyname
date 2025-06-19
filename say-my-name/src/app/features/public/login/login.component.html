@@ -1,23 +1,29 @@
 <body>
   <div class="auth-container">
-  <!-- Logout Section (shown when logged in) -->
-  <div *ngIf="isLoggedIn" class="logout-section">
-    <h2>Willkommen!</h2>
-    <p>Sie sind bereits eingeloggt.</p>
-    <button (click)="onLogout()" class="logout-btn">Abmelden</button>
-  </div>
+    <!-- Logout Section (shown when logged in) -->
+     <!-- Logout Section (shown when logged in) -->
+    <div *ngIf="isLoggedIn" class="form-container">
+      <div class="form-section">
+        <h1>Willkommen zurück!</h1>
+        <p class="welcome-message">Sie sind erfolgreich eingeloggt.</p>
+        <div class="user-actions">
+          <button (click)="onLogout()" class="logout-btn">Abmelden</button>
+          <a routerLink="/" class="home-link">Zur Startseite</a>
+        </div>
+      </div>
+    </div>
 
-  <!-- Login/Signup Section (shown when logged out) -->
-  <div *ngIf="!isLoggedIn" class="form-container">
-    <!-- Navigation zwischen Login und Registrierung -->
-    <ul class="tab-navigation">
-      <li class="tab-item" [class.active]="activeTab === 'signup'">
-        <a (click)="switchTab('signup')">Registrieren</a>
-      </li>
-      <li class="tab-item" [class.active]="activeTab === 'login'">
-        <a (click)="switchTab('login')">Anmelden</a>
-      </li>
-    </ul>
+    <!-- Login/Signup Section (shown when logged out) -->
+    <div *ngIf="!isLoggedIn" class="form-container">
+      <!-- Navigation zwischen Login und Registrierung -->
+      <ul class="tab-navigation">
+        <li class="tab-item" [class.active]="activeTab === 'signup'">
+          <a (click)="switchTab('signup')">Registrieren</a>
+        </li>
+        <li class="tab-item" [class.active]="activeTab === 'login'">
+          <a (click)="switchTab('login')">Anmelden</a>
+        </li>
+      </ul>
 
       <!-- Fehlermeldung anzeigen -->
       <div *ngIf="errorMessage" class="error-message global-error">
