@@ -86,7 +86,12 @@ export class LoginComponent {
     try {
       await signOut(this.auth);
       console.log('User logged out successfully');
-      this.router.navigate(['/auth']); // Zurück zur Auth-Seite
+      // Zur Login-Seite navigieren statt zu /auth
+      this.router.navigate(['/login']); 
+      // Optional: Formulare zurücksetzen
+      this.loginForm.reset();
+      this.signupForm.reset();
+      this.activeTab = 'login';
     } catch (error) {
       console.error('Logout error:', error);
       this.errorMessage = 'Logout failed';

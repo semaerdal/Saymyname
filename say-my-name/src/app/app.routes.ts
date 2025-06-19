@@ -2,8 +2,13 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 export const routes: Routes = [
-  {
+  { 
     path: '', 
+    redirectTo: 'home', 
+    pathMatch: 'full' 
+  },
+  {
+    path: 'home', 
     title: 'SayMyName - Home',
     loadChildren: () => import('./features/public/home/home.module').then(m => m.HomeModule) 
   },
@@ -18,21 +23,17 @@ export const routes: Routes = [
     title: 'Login',
     loadComponent: () => import('./features/public/login/login.component').then(m => m.LoginComponent)
   },
-
   // Account section
   { 
     path: 'account',
     title: 'My Account',
     loadComponent: () => import('./features/private/account/account.component').then(m => m.AccountComponent)
   },
-
- { 
+  { 
     path: 'cart',
     title: 'Cart',
     loadComponent: () => import('./features/private/cart/cart.component').then(m => m.CartComponent),
-    
   },
-
   // Static pages
   { 
     path: 'about',
@@ -49,13 +50,7 @@ export const routes: Routes = [
     title: 'Contact Us',
     loadComponent: () => import('./features/public/static/kontaktformular/kontaktformular.component').then(m => m.KontaktformularComponent)
   },
-
   // Wildcard route (fallback to home)
-  { path: '**', redirectTo: '' }
+  { path: '**', redirectTo: 'home' }
 ];
 
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
-})
-export class AppRoutingModule { }
