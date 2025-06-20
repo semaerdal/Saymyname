@@ -1,62 +1,94 @@
-<body>
-    <main>
-        <div class="banner">
-            <div class="banner-text">
-                <div class="banner-title">Kontakt</div>
-                <div class="banner-subtitle">Schreiben Sie uns eine Nachricht</div>
-            </div>
-        </div>
+<div class="banner">
+    <div class="banner-text">
+        <div class="banner-title">Kontakt</div>
+        <div class="banner-subtitle">Schreiben Sie uns eine Nachricht</div>
+    </div>
+</div>
 
-        <div class="container">
-            <div class="box-left">
-                <div class="boxHead">Kontaktformular</div>
-                <br>
-                <div class="boxInfo">
-                    <form class="contact-form" action="/submit-form" method="POST">
-                        <div class="form-group">
-                            <label for="name">Name:</label>
-                            <input type="text" placeholder="Name" id="name" name="name" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="email">Email:</label>
-                            <input type="email" placeholder="E-Mail" id="email" name="email" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="subject">Betreff:</label>
-                            <input type="text" placeholder="Betreff" id="subject" name="subject">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="message">Nachricht:</label>
-                            <textarea id="message" placeholder="Deine Nachricht..." name="message" rows="5" required></textarea>
-                        </div>
-
-                        <button type="submit" class="submit-btn">Nachricht senden</button>
-                    </form>
+<div class="container">
+    <div class="box-left">
+        <div class="boxHead">Kontaktformular</div>
+        <br>
+        <div class="boxInfo">
+            <form class="contact-form" [formGroup]="kontaktForm" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" placeholder="Name" id="name" formControlName="name" required>
+                    @if (submitted && kontaktForm.controls['name'].errors) {
+                        <div class="error-message">Bitte geben Sie Ihren Namen ein</div>
+                    }
                 </div>
-            </div>
 
-            <div class="box-right">
-                <div class="boxHead">Kontaktinformationen</div>
-                <br>
-                <div class="boxInfo">
-                    <p><strong>Adresse:</strong><br>
-                        Musterstraße 123<br>
-                        12345 Musterstadt</p>
-
-                    <p><strong>Telefon:</strong><br>
-                        +49 123 456789</p>
-
-                    <p><strong>Email:</strong><br>
-                        info&#64;saymyname.com</p>
-
-                    <p><strong>Öffnungszeiten:</strong><br>
-                        Mo-Fr: 9:00 - 18:00<br>
-                        Sa: 10:00 - 14:00</p>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" placeholder="E-Mail" id="email" formControlName="email" required>
+                    @if (submitted && kontaktForm.controls['email'].errors) {
+                        <div class="error-message">
+                            @if (kontaktForm.controls['email'].errors?.['required']) {
+                                <div>Bitte geben Sie Ihre Email ein</div>
+                            }
+                            @if (kontaktForm.controls['email'].errors?.['email']) {
+                                <div>Bitte geben Sie eine gültige Email ein</div>
+                            }
+                        </div>
+                    }
                 </div>
-            </div>
+
+                <div class="form-group">
+                    <label for="subject">Betreff:</label>
+                    <input type="text" placeholder="Betreff" id="subject" formControlName="subject">
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Nachricht:</label>
+                    <textarea id="message" placeholder="Deine Nachricht..." formControlName="message" rows="5" required></textarea>
+                    @if (submitted && kontaktForm.controls['message'].errors) {
+                        <div class="error-message">
+                            @if (kontaktForm.controls['message'].errors?.['required']) {
+                                <div>Bitte geben Sie eine Nachricht ein</div>
+                            }
+                            @if (kontaktForm.controls['message'].errors?.['minlength']) {
+                                <div>Die Nachricht muss mindestens 10 Zeichen lang sein</div>
+                            }
+                        </div>
+                    }
+                </div>
+
+                <button type="submit" class="submit-btn" [disabled]="isLoading">
+                    @if (!isLoading) {
+                        <span>Nachricht senden</span>
+                    }
+                    @if (isLoading) {
+                        <span>Wird gesendet...</span>
+                    }
+                </button>
+
+                @if (success) {
+                    <div class="success-message">
+                        Vielen Dank! Ihre Nachricht wurde erfolgreich versendet.
+                    </div>
+                }
+            </form>
         </div>
-    </main>
-</body>
+    </div>
+
+    <div class="box-right">
+        <div class="boxHead">Kontaktinformationen</div>
+        <br>
+        <div class="boxInfo">
+            <p><strong>Adresse:</strong><br>
+                Musterstraße 123<br>
+                12345 Musterstadt</p>
+
+            <p><strong>Telefon:</strong><br>
+                +49 123 456789</p>
+
+            <p><strong>Email:</strong><br>
+                info&#64;saymyname.com</p>
+
+            <p><strong>Öffnungszeiten:</strong><br>
+                Mo-Fr: 9:00 - 18:00<br>
+                Sa: 10:00 - 14:00</p>
+        </div>
+    </div>
+</div>
