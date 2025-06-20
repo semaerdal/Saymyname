@@ -5,8 +5,8 @@
       <!-- Hero Section -->
       <section class="hero">
         <div class="hero-content">
-          <h1>Discover Your Glow</h1>
-          <p class="subtitle">Luxury beauty products crafted for your unique radiance</p>
+          <h1>Entdecke Deinen Glow</h1>
+          <p class="subtitle">Luxuriöse Beauty-Produkte – designed für deine einzigartige Ausstrahlung</p>
           <a routerLink="/products" class="cta-button">Shop Now</a>
         </div>
         <div class="hero-image">
@@ -16,14 +16,14 @@
 
       <!-- Featured Categories -->
       <section class="featured-categories">
-        <h2>Our Collections</h2>
+        <h2>Unsere Kollektion</h2>
         <div class="categories-grid">
           @for (category of categories; track category.name) {
           <div class="category-card">
             <img [src]="category.image" [alt]="category.name">
             <div class="category-overlay">
               <h3>{{category.name}}</h3>
-               <a [routerLink]="'/products'"  class="shop-link">Shop {{category.name}}</a>
+              <a [routerLink]="'/products'" class="shop-link">Shop {{category.name}}</a>
             </div>
           </div>
           }
@@ -40,7 +40,7 @@
             <div class="product-info">
               <h3>{{product.name}}</h3>
               <p class="price">€{{product.price}}</p>
-              <a [routerLink]="'/products'" class="view-btn">View Product</a>
+              <a [routerLink]="'/products'" class="view-btn">Produktansicht</a>
             </div>
           </div>
           }
@@ -53,25 +53,26 @@
           <img src="assets/images/banner.png" alt="About our brand">
         </div>
         <div class="about-content">
-          <h2>Our Philosophy</h2>
-          <p>We believe beauty should be luxurious yet accessible, innovative yet timeless. Our products are
-            cruelty-free and formulated with the finest ingredients to enhance your natural beauty.</p>
           <ul class="benefits-list">
-            <li><i class="material-icons"><img src="assets/images/icons/check.png" alt="check mark"></i> Cruelty Free</li>
-            <li><i class="material-icons"><img src="assets/images/icons/check.png" alt="check mark"></i> Clean Ingredients</li>
-            <li><i class="material-icons"><img src="assets/images/icons/check.png" alt="check mark" color="red"></i> Sustainable Packaging</li>
+            <li><i class="material-icons"><img src="assets/images/icons/check.png" alt="Häkchen"></i> Tierversuchsfrei
+            </li>
+            <li><i class="material-icons"><img src="assets/images/icons/check.png" alt="Häkchen"></i> Saubere
+              Inhaltsstoffe</li>
+            <li><i class="material-icons"><img src="assets/images/icons/check.png" alt="Häkchen"></i> Nachhaltige
+              Verpackung</li>
           </ul>
-          <a routerLink="/about" class="learn-more">Learn More</a>
+          <a routerLink="/about" class="learn-more">Mehr erfahren</a>
         </div>
       </section>
 
       <!-- Newsletter -->
       <section class="newsletter">
         <div class="newsletter-content">
-          <h2>Join Our Beauty Community</h2>
-          <p>Subscribe to receive exclusive offers, beauty tips, and early access to new products.</p>
+          <h2>Werde Teil unserer Beauty-Community</h2>
+          <p>Sichere dir exklusive Angebote, Beauty-Tipps und neue Produkte als Erster!
+            Subscribe to receive exclusive offers, beauty tips, and early access to new products.</p>
           <form class="subscribe-form">
-            <input type="email" placeholder="Your email address">
+            <input type="email" placeholder="Deine E-Mail">
             <button type="submit" class="subscribe-btn">Subscribe</button>
           </form>
         </div>

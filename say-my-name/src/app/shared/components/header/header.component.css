@@ -73,20 +73,28 @@ nav li:hover,
 }
 
 .search-container input[type="text"] {
-  padding: 15px;
-  font-size: 17px;
+  padding: 10px 15px;
+  font-size: 16px;
   border: none;
   border-radius: 4px 0 0 4px;
 }
 
+.search-container input[type="text"]:focus {
+  outline: none;
+  width: 250px;
+}
+
 .search-container button {
-  padding: 15px 20px;
+  padding: 10px 15px;
   background: var(--cream);
   color: var(--deep-maroon);
-  font-size: 17px;
+  font-size: 16px;
   border: none;
   border-radius: 0 4px 4px 0;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 .search-container button:hover {
