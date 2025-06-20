@@ -1,6 +1,4 @@
 import { RouterModule, Routes } from '@angular/router';
-import { authGuard } from './guards/auth.guard';
-
 
 export const routes: Routes = [
   { 
@@ -31,17 +29,6 @@ export const routes: Routes = [
     loadComponent: () => import('./features/private/account/account.component').then(m => m.AccountComponent)
   },
   
-
-  {
-    path: 'account',
-    loadComponent: () => import('./account/account.component').then(m => m.AccountComponent),
-    canActivate: [authGuard],
-    children: [
-      { path: 'profile', loadComponent: () => import('./account/profile.component').then(m => m.ProfileComponent) },
-      { path: 'orders', loadComponent: () => import('./account/orders.component').then(m => m.OrdersComponent) }
-    ]
-  }
-
   // Static pages
   { 
     path: 'about',
