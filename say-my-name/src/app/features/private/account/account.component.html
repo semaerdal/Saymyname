@@ -1,1 +1,16 @@
-<p>account works!</p>
+<div *ngIf="isAuthenticated()">
+  <h2>Welcome, {{ user()?.name }}!</h2>
+  
+  <nav>
+    <a routerLink="/account/profile">Profile</a>
+    <a routerLink="/account/orders">Orders</a>
+    <button (click)="auth.logout()">Logout</button>
+  </nav>
+  
+  <router-outlet></router-outlet>
+</div>
+
+<div *ngIf="!isAuthenticated()">
+  <p>Please log in to view your account.</p>
+  <a routerLink="/login" class="login-link">Login</a>
+</div>
