@@ -1,54 +1,51 @@
-import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 export const routes: Routes = [
   { 
     path: '', 
+    redirectTo: 'home', 
+    pathMatch: 'full' 
+  },
+  {
+    path: 'home', 
     title: 'SayMyName - Home',
-    loadChildren: () => import('./features/home/home.module').then(m => m.HomeModule) 
+    loadComponent: () => import('./features/public/home/home.component').then(m => m.HomeComponent) 
   },
   { 
     path: 'products',
     title: 'Produkte',
-    loadChildren: () => import('./features/products/products.module').then(m => m.ProductsModule)
+    loadComponent: () => import('./features/public/products/product-page/product-page.component').then(m => m.ProductPageComponent)
   },
   // Auth routes
   { 
     path: 'login',
     title: 'Login',
-    loadComponent: () => import('./features/auth/login/login.component').then(m => m.LoginComponent)
+    loadComponent: () => import('./features/public/login/login.component').then(m => m.LoginComponent)
   },
-
   // Account section
   { 
     path: 'account',
     title: 'My Account',
-    loadComponent: () => import('./features/account/account.component').then(m => m.AccountComponent)
+    loadComponent: () => import('./features/private/account/account.component').then(m => m.AccountComponent)
   },
-
+  
   // Static pages
   { 
     path: 'about',
     title: 'About Us',
-    loadComponent: () => import('./features/static/about-us/about-us.component').then(m => m.AboutUsComponent)
+    loadComponent: () => import('./features/public/static/about-us/about-us.component').then(m => m.AboutUsComponent)
   },
   { 
     path: 'impressum',
     title: 'Impressum',
-    loadComponent: () => import('./features/static/impressum/impressum.component').then(m => m.ImpressumComponent)
+    loadComponent: () => import('./features/public/static/impressum/impressum.component').then(m => m.ImpressumComponent)
   },
   { 
     path: 'kontakt',
     title: 'Contact Us',
-    loadComponent: () => import('./features/static/kontaktformular/kontaktformular.component').then(m => m.KontaktformularComponent)
+    loadComponent: () => import('./features/public/static/kontaktformular/kontaktformular.component').then(m => m.KontaktformularComponent)
   },
-
   // Wildcard route (fallback to home)
-  { path: '**', redirectTo: '' }
+  { path: '**', redirectTo: 'home' }
 ];
 
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
-})
-export class AppRoutingModule { }

@@ -31,7 +31,7 @@
 }
 
 @media (max-width: 480px) {
-    */ .boxInfo p {
+     .boxInfo p {
         font-size: 0.9rem;
     }
 
