@@ -14,9 +14,8 @@
     width: 100%;
     height: auto;
     box-shadow: 0 4px 12px rgba(117, 64, 67, 0.15);
-    /* Neuer Schatten */
     transition: box-shadow 0.3s ease;
-    /* Sanfte Animation */
+
 }
 .boxInfo {
   line-height: 1.6;
@@ -37,12 +36,6 @@
   margin-bottom: 0.8em;
   position: relative;
   padding-left: 1.8em;
-}
-
-.check-icon {
-  color: #4CAF50;
-  position: absolute;
-  left: 0;
 }
 
 .signature {

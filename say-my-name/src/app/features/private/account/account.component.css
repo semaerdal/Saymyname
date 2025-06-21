@@ -1,0 +1,64 @@
+.image-box {
+    flex: 1;
+    min-width: 300px;
+    background-color: var(--blush);
+    height: auto;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+}
+
+.image-box img {
+    width: 100%;
+    height: auto;
+    box-shadow: 0 4px 12px rgba(117, 64, 67, 0.15);
+    transition: box-shadow 0.3s ease;
+
+}
+.boxInfo {
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.boxInfo h3 {
+  margin: 1.5em 0 0.8em;
+  color: #333;
+}
+
+.feature-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.feature-list li {
+  margin-bottom: 0.8em;
+  position: relative;
+  padding-left: 1.8em;
+}
+
+.signature {
+  margin-top: 2em;
+  font-style: italic;
+}
+
+.heart-icon {
+  margin-right: 0.3em;
+}
+
+.about-us-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  .image-box {
+    margin-top: 2em;
+  }
+}
