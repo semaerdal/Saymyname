@@ -79,10 +79,7 @@ nav li:hover,
   border-radius: 4px 0 0 4px;
 }
 
-.search-container input[type="text"]:focus {
-  outline: none;
-  width: 250px;
-}
+
 
 .search-container button {
   padding: 10px 15px;
