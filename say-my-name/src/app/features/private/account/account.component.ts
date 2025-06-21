@@ -11,9 +11,8 @@ import { AuthService } from '../../../core/services/auth.service';
   styleUrls: ['./account.component.css'] 
 })
 export class AccountComponent {
-  auth = inject(AuthService); // Modern injection syntax
+  auth = inject(AuthService);
 
-  // Example usage of auth service
   user = this.auth.currentUser();
   isAuthenticated = this.auth.isAuthenticated();
 }

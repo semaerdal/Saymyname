@@ -13,9 +13,7 @@ body {
   padding: 20px;
 }
 
-/* ======================
-  Formular mit Custom Colors
-   ====================== */
+/* Formular mit Custom Colors */
 
 .form-container {
   background: var(--cream);

@@ -1,9 +1,9 @@
-// src/app/models/product.model.ts
 export interface Product {
-  id?: string; // Firebase fügt die ID automatisch hinzu
+  id?: string; 
   name: string;
   price: number;
   description: string;
   imagePath: string;
-  // Weitere Felder nach Bedarf
 }
+
+// Fragezeichen ? damit Firebaseautomatisch die ID macht

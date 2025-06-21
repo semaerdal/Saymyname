@@ -1,4 +1,3 @@
-// src/app/app.component.ts
 import { Component, OnInit } from '@angular/core';
 import { RouterOutlet, NavigationEnd, Router } from '@angular/router';
 import { HeaderComponent } from './shared/components/header/header.component';

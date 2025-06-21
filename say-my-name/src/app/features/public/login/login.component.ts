@@ -124,9 +124,8 @@ export class LoginComponent {
     return control?.invalid && (control?.dirty || control?.touched);
   }
 
-  // In der Komponente
 goToHome() {
-  this.router.navigate(['/']);  // oder ['/home']
+  this.router.navigate(['/home']);
 }
 goToAccount() {
   this.router.navigate(['/account']);

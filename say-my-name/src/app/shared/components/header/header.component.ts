@@ -1,11 +1,11 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { FormsModule } from '@angular/forms'; // Für ngModel
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [RouterLink, FormsModule], // FormsModule hinzufügen
+  imports: [RouterLink, FormsModule],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
@@ -24,6 +24,5 @@ export class HeaderComponent {
 
   search() {
     this.searchEvent.emit(this.searchTerm);
-    this.closeMenu(); // Menü schließen nach der Suche (optional)
   }
 }

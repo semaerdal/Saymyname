@@ -28,6 +28,7 @@ export const routes: Routes = [
     title: 'Login',
     loadComponent: () => import('./features/public/login/login.component').then(m => m.LoginComponent)
   },
+
   // Account section
   { 
     path: 'account',
@@ -53,7 +54,7 @@ export const routes: Routes = [
   },
 
 
-  // Wildcard route (fallback to home)
+  // Wildcard route (zu home)
   { path: '**', redirectTo: 'home' }
 ];
 

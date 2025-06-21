@@ -1,4 +1,3 @@
-// features/public/products/product-page/product-page.component.ts
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProductService } from '../../../../core/services/product.service';
@@ -37,18 +36,12 @@ export class ProductPageComponent {
       details: {
         weight: 'N/A',
         type: 'N/A',
-        // You can add default shade if needed
-        ...(product as any).details // Spread any existing details from Firestore
+        ...(product as any).details
       }
     })))
   );
 
   toggleCart(product: ProductExtended): void {
     product.isAdded = !product.isAdded;
-  }
-
-  showDetails(product: ProductExtended): void {
-    console.log('Product details:', product);
-    // Implement modal or detailed view here
   }
 }
