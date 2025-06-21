@@ -4,10 +4,11 @@
     <div *ngIf="isLoggedIn" class="form-container">
       <div class="form-section">
         <h1>Willkommen zurück!</h1>
-        <p class="welcome-message">Sie sind erfolgreich eingeloggt.</p>
+        <p class="welcome-message">Du bist erfolgreich eingeloggt.</p>
         <div class="user-actions">
           <button (click)="onLogout()" class="logout-btn">Abmelden</button>
-          <button (click)="goToHome()" class="home-link">Zur Startseite</button>
+          <button (click)="goToAccount()" class="route-btn">Zum Account</button>
+          <button (click)="goToHome()" class="route-btn">Zur Startseite</button>
         </div>
       </div>
     </div>

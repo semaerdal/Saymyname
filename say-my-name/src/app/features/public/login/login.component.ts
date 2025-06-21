@@ -128,5 +128,7 @@ export class LoginComponent {
 goToHome() {
   this.router.navigate(['/']);  // oder ['/home']
 }
-
+goToAccount() {
+  this.router.navigate(['/account']);
+}
 }
