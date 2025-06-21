@@ -15,7 +15,7 @@ interface ProductExtended {
   name: string;
   price: number;
   description: string;
-  imageUrl: string;
+  imagePath: string;
   isAdded: boolean;
   details: ProductDetails;
 }

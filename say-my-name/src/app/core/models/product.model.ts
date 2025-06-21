@@ -4,6 +4,6 @@ export interface Product {
   name: string;
   price: number;
   description: string;
-  imageUrl: string;
+  imagePath: string;
   // Weitere Felder nach Bedarf
 }
