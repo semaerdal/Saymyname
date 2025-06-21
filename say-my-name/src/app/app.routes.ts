@@ -16,6 +16,12 @@ export const routes: Routes = [
     title: 'Produkte',
     loadComponent: () => import('./features/public/products/product-page/product-page.component').then(m => m.ProductPageComponent)
   },
+{ 
+    path: 'cart',
+    title: 'Warenkorb',
+    loadComponent: () => import('./features/public/cart/cart.component').then(m => m.CartComponent)
+  },
+
   // Auth routes
   { 
     path: 'login',
@@ -45,6 +51,8 @@ export const routes: Routes = [
     title: 'Contact Us',
     loadComponent: () => import('./features/public/static/kontaktformular/kontaktformular.component').then(m => m.KontaktformularComponent)
   },
+
+
   // Wildcard route (fallback to home)
   { path: '**', redirectTo: 'home' }
 ];
