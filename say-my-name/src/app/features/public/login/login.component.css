@@ -13,9 +13,7 @@ body {
   padding: 20px;
 }
 
-/* ======================
-  Formular mit Custom Colors
-   ====================== */
+/* Formular mit Custom Colors */
 
 .form-container {
   background: var(--cream);
@@ -213,13 +211,14 @@ input {
   transition: background 0.3s ease;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+
+  &:hover {
+    background: var(--dark-brown);
+  }
 }
 
-.logout-btn:hover {
-  background: var(--dark-brown);
-}
 
-.home-link {
+.route-btn {
   display: inline-block;
   padding: 12px;
   color: var(--deep-maroon);
@@ -227,10 +226,10 @@ input {
   border: 1px solid var(--deep-maroon);
   border-radius: 6px;
   transition: all 0.3s ease;
-}
 
-.home-link:hover {
-  background: var(--peach);
-  color: var(--dark-brown);
-  border-color: var(--peach);
+  &:hover {
+    background: var(--peach);
+    color: var(--dark-brown);
+    border-color: var(--peach);
+  }
 }

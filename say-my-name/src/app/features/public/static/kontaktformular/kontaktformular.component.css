@@ -42,3 +42,18 @@
     background-color: var(--deep-maroon);
     box-shadow: 0 2px 8px rgba(117, 64, 67, 0.3);
 }
+
+
+.error-message {
+  color: #dc3545;
+  font-size: 0.875em;
+  margin-top: 0.25rem;
+}
+
+.success-message {
+  color: #28a745;
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+}

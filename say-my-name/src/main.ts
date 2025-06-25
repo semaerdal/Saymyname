@@ -6,12 +6,10 @@ import { environment } from './environments/environment';
 import { AppComponent } from './app/app.component';
 import { appConfig } from './app/app.config';
 
-// Combine appConfig with Firebase providers
 const combinedConfig = {
   ...appConfig,
   providers: [
     ...(appConfig.providers || []),
-    // Add Firebase providers directly (no importProvidersFrom needed)
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideFirestore(() => getFirestore()),
     provideAuth(() => getAuth()),

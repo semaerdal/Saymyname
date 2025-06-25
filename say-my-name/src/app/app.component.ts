@@ -1,22 +1,29 @@
-// src/app/app.component.ts
-import { Component,OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterOutlet, NavigationEnd, Router } from '@angular/router';
-import { HeaderComponent } from './shared/components/header/header.component'; // Add this import
+import { HeaderComponent } from './shared/components/header/header.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, FooterComponent],  // Add HeaderComponent to imports
+  imports: [RouterOutlet, HeaderComponent, FooterComponent],
   template: `
-    <app-header></app-header>
+    <app-header (searchEvent)="onSearch($event)"></app-header>
     <router-outlet></router-outlet>
     <app-footer></app-footer>
   `
 })
 export class AppComponent implements OnInit {
-  constructor(private router: Router) {}
 
+
+  constructor(private router: Router) { }
+  onSearch(searchTerm: string) {
+    this.router.navigate(['/products'],
+      {
+        queryParams: { search: searchTerm },
+        queryParamsHandling: 'merge'
+      });
+  }
   ngOnInit() {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {

@@ -1,4 +1,3 @@
-<!-- src/app/shared/components/header/header.component.html -->
 <nav>
   <div class="nav-container">
     <!-- Hamburger Menu Icon (Mobile Only) -->
@@ -20,12 +19,16 @@
       <li><a routerLink="/kontakt" (click)="closeMenu()">Kontakt</a></li>
 
       <div>
-      <li class="no-events">
-        <div class="search-container"> 
-          <input type="text" placeholder="Suche..." name="searchbar">
-          <button onclick="searchBar()">Suchen <img src="/assets/images/icons/search.png" alt="Suche"></button>
-        </div>
-      </li>
+        <li class="no-events">
+          <div class="search-container"> 
+            <input type="text" 
+                   placeholder="Suche..." 
+                   name="searchbar"
+                   [(ngModel)]="searchTerm"
+                   (keyup.enter)="search()">
+            <button (click)="search()">Suchen <img src="/assets/images/icons/search.png" alt="Suche"></button>
+          </div>
+        </li>
       </div>
       
       <!-- Right-aligned items group -->

@@ -7,7 +7,7 @@ import { tap } from 'rxjs';
 export class AuthService {
   private http = inject(HttpClient);
   private router = inject(Router);
-  
+
   isAuthenticated = signal(false);
   currentUser = signal<any>(null);
 
