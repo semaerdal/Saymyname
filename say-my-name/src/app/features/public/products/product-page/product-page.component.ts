@@ -3,12 +3,14 @@ import { CommonModule } from '@angular/common';
 import { ProductService } from '../../../../core/services/product.service';
 import { Observable, map } from 'rxjs';
 
+// Produktdetails
 interface ProductDetails {
   shade?: string;
   weight: string;
   type: string;
 }
 
+// mehr Produktdetails
 interface ProductExtended {
   id?: string;
   name: string;
@@ -28,7 +30,7 @@ interface ProductExtended {
 })
 export class ProductPageComponent {
   private productService = inject(ProductService);
-  
+
   products$: Observable<ProductExtended[]> = this.productService.getProducts().pipe(
     map(products => products.map(product => ({
       ...product,
@@ -41,6 +43,7 @@ export class ProductPageComponent {
     })))
   );
 
+  // in Warenkorb einfügen
   toggleCart(product: ProductExtended): void {
     product.isAdded = !product.isAdded;
   }

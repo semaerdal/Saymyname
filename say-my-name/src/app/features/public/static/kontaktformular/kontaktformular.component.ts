@@ -11,6 +11,8 @@ import { ReactiveFormsModule } from '@angular/forms';
   templateUrl: './kontaktformular.component.html',
   styleUrls: ['./kontaktformular.component.css']
 })
+
+// Abgeschickt oder nicht
 export class KontaktformularComponent {
   kontaktForm: FormGroup;
   submitted = false;
@@ -26,6 +28,7 @@ export class KontaktformularComponent {
     });
   }
 
+  // Abschicken
   async onSubmit() {
     this.submitted = true;
     this.isLoading = true;
@@ -43,6 +46,7 @@ export class KontaktformularComponent {
       timestamp: new Date().toISOString()
     };
 
+    // in Firestore "kontakte" speichern
     try {
       const docRef = await addDoc(collection(this.firestore, 'kontakte'), formData);
       console.log("Document written with ID: ", docRef.id);

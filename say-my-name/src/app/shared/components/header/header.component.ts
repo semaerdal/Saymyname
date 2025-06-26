@@ -11,7 +11,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class HeaderComponent {
   menuActive = false;
-  searchTerm: string = '';
+  searchTerm: string = ''; //Suchbegriff speichern
   @Output() searchEvent = new EventEmitter<string>();
 
   toggleMenu() {
