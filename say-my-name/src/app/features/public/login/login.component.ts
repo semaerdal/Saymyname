@@ -15,7 +15,7 @@ import { FirebaseError } from 'firebase/app';
 
 export class LoginComponent {
   activeTab: 'login' | 'signup' = 'login'; // switch zwischen Login & Registrieren
-  auth = inject(Auth); //Firebase
+  auth = inject(Auth); // Firebase
   errorMessage: string | null = null;
   isLoggedIn = false;
 
@@ -27,7 +27,7 @@ export class LoginComponent {
     password: new FormControl('', [Validators.required, Validators.minLength(6)])
   });
 
-  //Login
+  // Login
   loginForm = new FormGroup({
     email: new FormControl('', [Validators.required, Validators.email]),
     password: new FormControl('', [Validators.required])
@@ -45,11 +45,11 @@ export class LoginComponent {
     this.errorMessage = null;
   }
 
-  //Logik
+  // Logik Registrieren
   async onSignup() {
     if (this.signupForm.valid) {
       const { email, password } = this.signupForm.value;
-      
+
       try {
         if (email && password) {
           await createUserWithEmailAndPassword(this.auth, email, password);
@@ -66,10 +66,11 @@ export class LoginComponent {
     }
   }
 
+  // Logik Login
   async onLogin() {
     if (this.loginForm.valid) {
       const { email, password } = this.loginForm.value;
-      
+
       try {
         if (email && password) {
           await signInWithEmailAndPassword(this.auth, email, password);
@@ -86,11 +87,12 @@ export class LoginComponent {
     }
   }
 
+  // Logik Logout
   async onLogout() {
     try {
       await signOut(this.auth);
       console.log('User logged out successfully');
-      this.router.navigate(['/login']); 
+      this.router.navigate(['/login']);
       this.loginForm.reset();
       this.signupForm.reset();
       this.activeTab = 'login';
@@ -100,7 +102,7 @@ export class LoginComponent {
     }
   }
 
-  //Fehlermeldung
+  // Fehlermeldung
   private handleFirebaseError(error: FirebaseError) {
     switch (error.code) {
       case 'auth/email-already-in-use':
@@ -129,10 +131,11 @@ export class LoginComponent {
     return control?.invalid && (control?.dirty || control?.touched);
   }
 
-goToHome() {
-  this.router.navigate(['/home']);
-}
-goToAccount() {
-  this.router.navigate(['/account']);
-}
+  // Navigation
+  goToHome() {
+    this.router.navigate(['/home']);
+  }
+  goToAccount() {
+    this.router.navigate(['/account']);
+  }
 }

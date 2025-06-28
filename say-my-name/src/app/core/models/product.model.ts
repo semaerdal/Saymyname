@@ -6,4 +6,4 @@ export interface Product {
   imagePath: string;
 }
 
-// Fragezeichen ? damit Firebaseautomatisch die ID macht
+// Fragezeichen ? damit Firebase automatisch die ID macht

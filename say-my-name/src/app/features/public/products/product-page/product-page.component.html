@@ -6,6 +6,7 @@
     </div>
   </div>
 
+  <!-- Produktliste -->
   <div class="products-container">
     <div class="product-card" *ngFor="let product of products$ | async">
       <div class="product-image">
@@ -21,11 +22,13 @@
           <span class="spec-value">{{product.details.shade}}</span>
         </div>
         
+        <!-- Warenkorb Button -->
         <button class="add-to-cart" 
                 (click)="toggleCart(product)"
                 [class.added]="product.isAdded"
                 [attr.aria-label]="product.isAdded ? 'Added to cart' : 'Add to cart'">
           <span class="cart-icon-wrapper">
+            <!-- Icons wechseln -->
             <img src="assets/images/icons/cart.png" alt="" class="cart-icon" *ngIf="!product.isAdded">
             <img src="assets/images/icons/check.png" alt="" class="check-icon" *ngIf="product.isAdded">
           </span>
@@ -35,6 +38,7 @@
   </div>
 </main>
 
+<!-- Ladeanzeige -->
 <ng-template #loading>
   <div class="loading-spinner">Produkte werden geladen...</div>
 </ng-template>

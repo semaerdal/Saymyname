@@ -65,7 +65,7 @@ nav li:hover,
   background-color: var(--blush);
 }
 
-/* Originale Suchleiste */
+/* Suchleiste */
 .search-container {
   display: flex;
   align-items: center;
@@ -101,13 +101,13 @@ nav li:hover,
   background-color: transparent !important;
 }
 
-/* Right-aligned items */
+/* Rechts Items */
 .right-items {
   display: flex;
   margin-left: 0;
 }
 
-/* Desktop Styles */
+/* Desktop Styles ab 769px */
 @media (min-width: 769px) {
   .nav-container {
     justify-content: space-between;
@@ -127,7 +127,7 @@ nav li:hover,
   }
 }
 
-/* Mobile Styles */
+/* Mobile Styles bis 768px */
 @media (max-width: 768px) {
   .hamburger {
     display: flex;

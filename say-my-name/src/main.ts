@@ -6,6 +6,7 @@ import { environment } from './environments/environment';
 import { AppComponent } from './app/app.component';
 import { appConfig } from './app/app.config';
 
+// Firebase hinzufügen
 const combinedConfig = {
   ...appConfig,
   providers: [
@@ -16,5 +17,6 @@ const combinedConfig = {
   ],
 };
 
+// Fehlermeldung
 bootstrapApplication(AppComponent, combinedConfig)
   .catch((err) => console.error(err));

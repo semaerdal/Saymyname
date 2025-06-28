@@ -9,8 +9,9 @@ import { Product } from '../models/product.model';
 export class ProductService {
     private firestore: Firestore = inject(Firestore);
 
+    // Firebase "products" Infos abgerufen
     getProducts(): Observable<Product[]> {
-        const productsCollection = collection(this.firestore, 'products'); // 'products' ist der Collection-Name in Firebase
+        const productsCollection = collection(this.firestore, 'products');
         return collectionData(productsCollection, { idField: 'id' }) as Observable<Product[]>;
     }
 }

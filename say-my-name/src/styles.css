@@ -1,27 +1,24 @@
-/* ==================== */
-/* CUSTOM COLOR PALETTE  */
-/* ==================== */
-:root {
-  /* Primary Colors */
-  --peach: #FFC9B5;       /* Soft peach (main brand color) */
-  --deep-maroon: #754043; /* Rich maroon */
-  --blush: #F7B1AB;       /* Light blush */
-  --dark-brown: #3A2618;  /* Deep brown */
-  --black: #000000;       /* Pure black */
+/* Farben */
 
-  /* Derived Neutrals */
-  --cream: #FFF8F6;       /* Created from peach */
-  --warm-gray: #8C8C8C;   /* Complementary gray */
+:root {
+  /* Hauptfarben */
+  --peach: #FFC9B5;       
+  --deep-maroon: #754043; 
+  --blush: #F7B1AB;       
+  --dark-brown: #3A2618;  
+  --black: #000000;       
+
+  /* Neutrale Farben */
+  --cream: #FFF8F6;       
+  --warm-gray: #8C8C8C;   
 
   /* Semantic Colors */
-  --success: #5C8D4E;     /* Earthy green */
-  --warning: #E6A443;     /* Golden yellow */
-  --error: #C84648;       /* Maroon-based red */
+  --success: #5C8D4E;     
+  --warning: #E6A443;     
+  --error: #C84648;       
 }
 
-/* ==================== */
-/* COMPONENT STYLING     */
-/* ==================== */
+/* Komponenten */
 
 /* Global styles */
 body {
@@ -43,9 +40,8 @@ img {
   border-radius: 25px;
 }
 
-/* ==================== */
-/* CONTENT BOX STYLES */
-/* ==================== */
+/* Content Box */
+
 .container {
   display: flex;
   flex-wrap: wrap;
@@ -81,9 +77,9 @@ img {
   font-weight: normal;
   line-height: 1.6;
 }
-/* ==================== */
-/* BANNER STYLES */
-/* ==================== */
+
+/* Banner */
+
 .banner {
   position: relative;
   width: 90%;
@@ -95,9 +91,7 @@ img {
   background-repeat: no-repeat;
   border-radius: 25px;
   box-shadow: 0 8px 20px rgba(117, 64, 67, 0.2);
-  /* Neuer Schatten */
   overflow: hidden;
-  /* Verhindert überlaufende Schatten */
 }
 
 .banner-text {
@@ -126,6 +120,7 @@ img {
 
 
 /* Button styles */
+
 .submit-btn {
   color: var(--cream);
   padding: 14px;
@@ -138,9 +133,8 @@ img {
 }
 
 
-/* ==================== */
-/* MOBILE STYLES */
-/* ==================== */
+/* Mobile style */
+
 @media (max-width: 768px) {
 
   html,

@@ -1,3 +1,4 @@
+/* footer */
 footer {
   padding: 1em;
   background: var(--deep-maroon);
@@ -7,6 +8,7 @@ footer {
   margin-top: 2%;
 }
 
+/* Navigation Links */
 footer ul {
   padding: 0;
   display: table-cell;

@@ -31,6 +31,7 @@ interface ProductExtended {
 export class ProductPageComponent {
   private productService = inject(ProductService);
 
+  // Produktliste
   products$: Observable<ProductExtended[]> = this.productService.getProducts().pipe(
     map(products => products.map(product => ({
       ...product,

@@ -11,6 +11,7 @@ import { CommonModule } from '@angular/common';
 })
 export class HomeComponent {
 
+  // Kollektion
  categories = [
     {
       name: 'Skincare',
@@ -30,6 +31,7 @@ export class HomeComponent {
     }
   ];
 
+  // Best Sellers
   featuredProducts = [
     {
       name: 'Luminous Foundation',

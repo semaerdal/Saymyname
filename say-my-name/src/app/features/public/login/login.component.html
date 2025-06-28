@@ -1,6 +1,6 @@
 <body>
   <div class="auth-container">
-    <!-- Logout Section (shown when logged in) -->
+    <!-- Logout (wenn eingeloggt) -->
     <div *ngIf="isLoggedIn" class="form-container">
       <div class="form-section">
         <h1>Willkommen zurück!</h1>
@@ -13,7 +13,7 @@
       </div>
     </div>
 
-    <!-- Login/Signup Section (shown when logged out) -->
+    <!-- Login ( wenn nicht eingelogt) -->
     <div *ngIf="!isLoggedIn" class="form-container">
       <!-- Navigation zwischen Login und Registrierung -->
       <ul class="tab-navigation">

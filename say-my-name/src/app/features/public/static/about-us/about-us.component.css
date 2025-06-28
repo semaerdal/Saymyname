@@ -1,3 +1,4 @@
+/* Bild */
 .image-box {
     flex: 1;
     min-width: 300px;
@@ -14,10 +15,10 @@
     width: 100%;
     height: auto;
     box-shadow: 0 4px 12px rgba(117, 64, 67, 0.15);
-    /* Neuer Schatten */
     transition: box-shadow 0.3s ease;
-    /* Sanfte Animation */
 }
+
+/* Text */
 .boxInfo {
   line-height: 1.6;
   font-size: 1rem;
@@ -28,6 +29,7 @@
   color: #333;
 }
 
+/* Liste */
 .feature-list {
   list-style-type: none;
   padding-left: 0;
@@ -61,6 +63,7 @@
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
+/* Mobil */
 @media (max-width: 768px) {
   .container {
     flex-direction: column;

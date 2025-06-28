@@ -1,5 +1,5 @@
 
-/* Hero Section */
+/* Banner oben */
 .hero {
   display: flex;
   align-items: center;
@@ -52,7 +52,7 @@
   box-shadow: 0 20px 40px rgba(0,0,0,0.1);
 }
 
-/* Featured Categories */
+/* Kollektion */
 .featured-categories {
   padding: 80px 5%;
   text-align: center;
@@ -179,7 +179,7 @@
   background: var(--blush);
 }
 
-/* About Section */
+/* Abschnitt Section */
 .about-section {
   display: flex;
   align-items: center;
@@ -292,7 +292,7 @@
   background: var(--blush);
 }
 
-/* Responsive Design */
+/* Mobil */
 @media (max-width: 768px) {
   .hero {
     flex-direction: column;

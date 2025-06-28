@@ -7,16 +7,13 @@ import { FooterComponent } from './shared/components/footer/footer.component';
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet, HeaderComponent, FooterComponent],
-  template: `
-    <app-header (searchEvent)="onSearch($event)"></app-header>
-    <router-outlet></router-outlet>
-    <app-footer></app-footer>
-  `
+  templateUrl: './app.component.html',
 })
 export class AppComponent implements OnInit {
 
-
   constructor(private router: Router) { }
+
+  // Bei Suche zur Produktseite
   onSearch(searchTerm: string) {
     this.router.navigate(['/products'],
       {
@@ -24,6 +21,8 @@ export class AppComponent implements OnInit {
         queryParamsHandling: 'merge'
       });
   }
+
+  // nach oben scrollen bei neuer Seite
   ngOnInit() {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {

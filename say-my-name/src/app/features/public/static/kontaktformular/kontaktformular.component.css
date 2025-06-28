@@ -1,3 +1,4 @@
+/* Formular links */
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -29,6 +30,7 @@
     resize: vertical;
 }
 
+/* Button */ 
 .submit-btn {
     background-color: var(--dark-brown);
     cursor: pointer;
@@ -40,15 +42,15 @@
     box-shadow: 0 2px 8px rgba(117, 64, 67, 0.3);
 }
 
-
+/* Rückmeldung */
 .error-message {
-  color: #dc3545;
+  color: var(--error);
   font-size: 0.875em;
   margin-top: 0.25rem;
 }
 
 .success-message {
-  color: #28a745;
+  color: var(--success);
   margin-top: 1rem;
   padding: 0.75rem;
   background-color: #f8f9fa;
