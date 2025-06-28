@@ -9,11 +9,13 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
+
 export class HeaderComponent {
   menuActive = false;
-  searchTerm: string = '';
+  searchTerm: string = ''; // Suchbegriff speichern
   @Output() searchEvent = new EventEmitter<string>();
 
+  // Menü Mobil
   toggleMenu() {
     this.menuActive = !this.menuActive;
   }
@@ -22,6 +24,7 @@ export class HeaderComponent {
     this.menuActive = false;
   }
 
+  // Suchen
   search() {
     this.searchEvent.emit(this.searchTerm);
   }

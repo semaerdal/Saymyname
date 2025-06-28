@@ -8,6 +8,8 @@ import { RouterLink } from '@angular/router';
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.css'
 })
+
+// Leer, muss sein, damit es angezeigt wird
 export class FooterComponent {
 
 }

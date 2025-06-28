@@ -13,6 +13,7 @@ export class AuthService {
 
   constructor() { }
 
+  // Speichert Userdaten und Token bei Login
   login(credentials: { email: string; password: string }) {
     return this.http.post('/api/auth/login', credentials).pipe(
       tap((response: any) => {
@@ -23,6 +24,7 @@ export class AuthService {
     );
   }
 
+  // entfernt Token bei Logout, navigiert zurück zu Login
   logout() {
     localStorage.removeItem('auth_token');
     this.isAuthenticated.set(false);
@@ -30,6 +32,7 @@ export class AuthService {
     this.router.navigate(['/login']);
   }
 
+  // liefert gespeicherte Token
   getToken(): string | null {
     return localStorage.getItem('auth_token');
   }

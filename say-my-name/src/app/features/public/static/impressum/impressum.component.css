@@ -1,6 +1,3 @@
-/* ==================== */
-/* CONTENT BOX STYLES */
-/* ==================== */
 .boxInfo p {
     margin-bottom: 1.5rem;
 }
@@ -21,9 +18,7 @@
     text-decoration: none;
 }
 
-/* ==================== */
-/* MOBILE STYLES */
-/* ==================== */
+/* Mobile */
 @media (max-width: 768px) {
     .boxInfo p {
         font-size: 0.95rem;
@@ -34,5 +29,4 @@
      .boxInfo p {
         font-size: 0.9rem;
     }
-
 }

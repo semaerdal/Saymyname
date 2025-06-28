@@ -14,7 +14,6 @@ body {
 }
 
 /* Formular mit Custom Colors */
-
 .form-container {
   background: var(--cream);
   padding: 50px 40px;
@@ -134,7 +133,6 @@ input {
     border-color: var(--deep-maroon);
     outline: none;
     box-shadow: 0 0 0 3px rgba(117, 64, 67, 0.1);
-    /* sanfter Fokusrahmen */
   }
 
   &.invalid {
@@ -149,22 +147,6 @@ input {
   font-size: 13px;
   margin-top: 5px;
   display: block;
-}
-
-/* Buttons */
-.submit-btn {
-  background: var(--deep-maroon);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-
-  &:hover {
-    background-color: var(--dark-brown);
-  }
-
-  &[disabled] {
-    background: var(--warm-gray);
-    cursor: not-allowed;
-  }
 }
 
 /* Passwort vergessen */
@@ -185,9 +167,7 @@ input {
 }
 
 
-/* ======================
-  Logout Bereich
-   ====================== */
+/* Logout Bereich */
 .welcome-message {
   color: var(--dark-brown);
   font-size: 18px;
@@ -198,6 +178,22 @@ input {
   display: flex;
   flex-direction: column;
   gap: 15px;
+}
+
+/* Buttons */
+.submit-btn {
+  background: var(--deep-maroon);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+
+  &:hover {
+    background-color: var(--dark-brown);
+  }
+
+  &[disabled] {
+    background: var(--warm-gray);
+    cursor: not-allowed;
+  }
 }
 
 .logout-btn {
@@ -216,7 +212,6 @@ input {
     background: var(--dark-brown);
   }
 }
-
 
 .route-btn {
   display: inline-block;

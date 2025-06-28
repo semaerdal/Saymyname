@@ -1,3 +1,4 @@
+/* footer */
 footer {
   padding: 1em;
   background: var(--deep-maroon);
@@ -7,6 +8,7 @@ footer {
   margin-top: 2%;
 }
 
+/* Navigation Links */
 footer ul {
   padding: 0;
   display: table-cell;
@@ -31,6 +33,8 @@ footer a {
   text-decoration: none;
 }
 
+
+/* Mobile */
 @media screen and (max-width: 768px) {
   footer {
     column-count: 1;

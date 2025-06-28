@@ -1,6 +1,10 @@
 import { RouterModule, Routes } from '@angular/router';
 
+//Navigation aller Seiten, Routen
+
 export const routes: Routes = [
+
+  // Startseite
   { 
     path: '', 
     redirectTo: 'home', 
@@ -22,14 +26,14 @@ export const routes: Routes = [
     loadComponent: () => import('./features/public/cart/cart.component').then(m => m.CartComponent)
   },
 
-  // Auth routes
+  // Authentifizierung
   { 
     path: 'login',
     title: 'Login',
     loadComponent: () => import('./features/public/login/login.component').then(m => m.LoginComponent)
   },
 
-  // Account section
+  // Account
   { 
     path: 'account',
     title: 'My Account',
